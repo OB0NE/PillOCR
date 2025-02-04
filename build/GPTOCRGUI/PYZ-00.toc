@@ -1,0 +1,3809 @@
+('D:\\MyFiles\\AImodels\\OCR-with-GPT - 打包\\build\\GPTOCRGUI\\PYZ-00.pyz',
+ [('PIL',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\__init__.py',
+   'PYMODULE'),
+  ('PIL.BlpImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\BlpImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BmpImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\BmpImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.BufrStubImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\BufrStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.CurImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\CurImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.DcxImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\DcxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.DdsImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\DdsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.EpsImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\EpsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ExifTags',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ExifTags.py',
+   'PYMODULE'),
+  ('PIL.FitsImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\FitsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FliImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\FliImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FpxImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\FpxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.FtexImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\FtexImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GbrImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\GbrImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GifImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\GifImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.GimpGradientFile',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\GimpGradientFile.py',
+   'PYMODULE'),
+  ('PIL.GimpPaletteFile',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\GimpPaletteFile.py',
+   'PYMODULE'),
+  ('PIL.GribStubImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\GribStubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Hdf5StubImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\Hdf5StubImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IcnsImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\IcnsImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IcoImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\IcoImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.ImImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Image',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\Image.py',
+   'PYMODULE'),
+  ('PIL.ImageChops',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageChops.py',
+   'PYMODULE'),
+  ('PIL.ImageCms',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageCms.py',
+   'PYMODULE'),
+  ('PIL.ImageColor',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageColor.py',
+   'PYMODULE'),
+  ('PIL.ImageDraw',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageDraw.py',
+   'PYMODULE'),
+  ('PIL.ImageDraw2',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageDraw2.py',
+   'PYMODULE'),
+  ('PIL.ImageFile',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageFile.py',
+   'PYMODULE'),
+  ('PIL.ImageFilter',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageFilter.py',
+   'PYMODULE'),
+  ('PIL.ImageFont',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageFont.py',
+   'PYMODULE'),
+  ('PIL.ImageGrab',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageGrab.py',
+   'PYMODULE'),
+  ('PIL.ImageMath',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageMath.py',
+   'PYMODULE'),
+  ('PIL.ImageMode',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageMode.py',
+   'PYMODULE'),
+  ('PIL.ImageOps',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageOps.py',
+   'PYMODULE'),
+  ('PIL.ImagePalette',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImagePalette.py',
+   'PYMODULE'),
+  ('PIL.ImagePath',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImagePath.py',
+   'PYMODULE'),
+  ('PIL.ImageQt',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageQt.py',
+   'PYMODULE'),
+  ('PIL.ImageSequence',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageSequence.py',
+   'PYMODULE'),
+  ('PIL.ImageShow',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageShow.py',
+   'PYMODULE'),
+  ('PIL.ImageTk',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageTk.py',
+   'PYMODULE'),
+  ('PIL.ImageWin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImageWin.py',
+   'PYMODULE'),
+  ('PIL.ImtImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\ImtImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.IptcImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\IptcImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.Jpeg2KImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\Jpeg2KImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.JpegImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\JpegImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.JpegPresets',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\JpegPresets.py',
+   'PYMODULE'),
+  ('PIL.McIdasImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\McIdasImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MicImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\MicImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MpegImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\MpegImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MpoImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\MpoImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.MspImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\MspImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PaletteFile',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\PaletteFile.py',
+   'PYMODULE'),
+  ('PIL.PalmImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\PalmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PcdImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\PcdImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PcxImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\PcxImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PdfImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\PdfImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PdfParser',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\PdfParser.py',
+   'PYMODULE'),
+  ('PIL.PixarImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\PixarImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PngImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\PngImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PpmImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\PpmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.PsdImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\PsdImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.QoiImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\QoiImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SgiImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\SgiImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SpiderImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\SpiderImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.SunImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\SunImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.TgaImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\TgaImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.TiffImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\TiffImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.TiffTags',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\TiffTags.py',
+   'PYMODULE'),
+  ('PIL.WebPImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\WebPImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.WmfImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\WmfImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XVThumbImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\XVThumbImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XbmImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\XbmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL.XpmImagePlugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\XpmImagePlugin.py',
+   'PYMODULE'),
+  ('PIL._binary',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\_binary.py',
+   'PYMODULE'),
+  ('PIL._deprecate',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\_deprecate.py',
+   'PYMODULE'),
+  ('PIL._typing',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\_typing.py',
+   'PYMODULE'),
+  ('PIL._util',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\_util.py',
+   'PYMODULE'),
+  ('PIL._version',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\_version.py',
+   'PYMODULE'),
+  ('PIL.features',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\PIL\\features.py',
+   'PYMODULE'),
+  ('__future__',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\__future__.py',
+   'PYMODULE'),
+  ('_aix_support',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\_aix_support.py',
+   'PYMODULE'),
+  ('_compat_pickle',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\_compat_pickle.py',
+   'PYMODULE'),
+  ('_compression',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\_compression.py',
+   'PYMODULE'),
+  ('_distutils_hack',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\_distutils_hack\\__init__.py',
+   'PYMODULE'),
+  ('_distutils_hack.override',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\_distutils_hack\\override.py',
+   'PYMODULE'),
+  ('_py_abc', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\_py_abc.py', 'PYMODULE'),
+  ('_pydatetime',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\_pydatetime.py',
+   'PYMODULE'),
+  ('_pydecimal',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\_pydecimal.py',
+   'PYMODULE'),
+  ('_sitebuiltins',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\_sitebuiltins.py',
+   'PYMODULE'),
+  ('_strptime',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\_strptime.py',
+   'PYMODULE'),
+  ('_threading_local',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\_threading_local.py',
+   'PYMODULE'),
+  ('annotated_types',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\annotated_types\\__init__.py',
+   'PYMODULE'),
+  ('anyio',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\__init__.py',
+   'PYMODULE'),
+  ('anyio._backends',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_backends\\__init__.py',
+   'PYMODULE'),
+  ('anyio._backends._asyncio',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_backends\\_asyncio.py',
+   'PYMODULE'),
+  ('anyio._backends._trio',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_backends\\_trio.py',
+   'PYMODULE'),
+  ('anyio._core',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_core\\__init__.py',
+   'PYMODULE'),
+  ('anyio._core._asyncio_selector_thread',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_core\\_asyncio_selector_thread.py',
+   'PYMODULE'),
+  ('anyio._core._eventloop',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_core\\_eventloop.py',
+   'PYMODULE'),
+  ('anyio._core._exceptions',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_core\\_exceptions.py',
+   'PYMODULE'),
+  ('anyio._core._fileio',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_core\\_fileio.py',
+   'PYMODULE'),
+  ('anyio._core._resources',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_core\\_resources.py',
+   'PYMODULE'),
+  ('anyio._core._signals',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_core\\_signals.py',
+   'PYMODULE'),
+  ('anyio._core._sockets',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_core\\_sockets.py',
+   'PYMODULE'),
+  ('anyio._core._streams',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_core\\_streams.py',
+   'PYMODULE'),
+  ('anyio._core._subprocesses',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_core\\_subprocesses.py',
+   'PYMODULE'),
+  ('anyio._core._synchronization',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_core\\_synchronization.py',
+   'PYMODULE'),
+  ('anyio._core._tasks',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_core\\_tasks.py',
+   'PYMODULE'),
+  ('anyio._core._testing',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_core\\_testing.py',
+   'PYMODULE'),
+  ('anyio._core._typedattr',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\_core\\_typedattr.py',
+   'PYMODULE'),
+  ('anyio.abc',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\abc\\__init__.py',
+   'PYMODULE'),
+  ('anyio.abc._eventloop',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\abc\\_eventloop.py',
+   'PYMODULE'),
+  ('anyio.abc._resources',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\abc\\_resources.py',
+   'PYMODULE'),
+  ('anyio.abc._sockets',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\abc\\_sockets.py',
+   'PYMODULE'),
+  ('anyio.abc._streams',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\abc\\_streams.py',
+   'PYMODULE'),
+  ('anyio.abc._subprocesses',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\abc\\_subprocesses.py',
+   'PYMODULE'),
+  ('anyio.abc._tasks',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\abc\\_tasks.py',
+   'PYMODULE'),
+  ('anyio.abc._testing',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\abc\\_testing.py',
+   'PYMODULE'),
+  ('anyio.from_thread',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\from_thread.py',
+   'PYMODULE'),
+  ('anyio.lowlevel',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\lowlevel.py',
+   'PYMODULE'),
+  ('anyio.streams',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\streams\\__init__.py',
+   'PYMODULE'),
+  ('anyio.streams.memory',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\streams\\memory.py',
+   'PYMODULE'),
+  ('anyio.streams.stapled',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\streams\\stapled.py',
+   'PYMODULE'),
+  ('anyio.streams.tls',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\streams\\tls.py',
+   'PYMODULE'),
+  ('anyio.to_thread',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\anyio\\to_thread.py',
+   'PYMODULE'),
+  ('argparse', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\argparse.py', 'PYMODULE'),
+  ('ast', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\ast.py', 'PYMODULE'),
+  ('asyncio',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\__init__.py',
+   'PYMODULE'),
+  ('asyncio.base_events',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\base_events.py',
+   'PYMODULE'),
+  ('asyncio.base_futures',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\base_futures.py',
+   'PYMODULE'),
+  ('asyncio.base_subprocess',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\base_subprocess.py',
+   'PYMODULE'),
+  ('asyncio.base_tasks',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\base_tasks.py',
+   'PYMODULE'),
+  ('asyncio.constants',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\constants.py',
+   'PYMODULE'),
+  ('asyncio.coroutines',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\coroutines.py',
+   'PYMODULE'),
+  ('asyncio.events',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\events.py',
+   'PYMODULE'),
+  ('asyncio.exceptions',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\exceptions.py',
+   'PYMODULE'),
+  ('asyncio.format_helpers',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\format_helpers.py',
+   'PYMODULE'),
+  ('asyncio.futures',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\futures.py',
+   'PYMODULE'),
+  ('asyncio.locks',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\locks.py',
+   'PYMODULE'),
+  ('asyncio.log',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\log.py',
+   'PYMODULE'),
+  ('asyncio.mixins',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\mixins.py',
+   'PYMODULE'),
+  ('asyncio.proactor_events',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\proactor_events.py',
+   'PYMODULE'),
+  ('asyncio.protocols',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\protocols.py',
+   'PYMODULE'),
+  ('asyncio.queues',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\queues.py',
+   'PYMODULE'),
+  ('asyncio.runners',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\runners.py',
+   'PYMODULE'),
+  ('asyncio.selector_events',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\selector_events.py',
+   'PYMODULE'),
+  ('asyncio.sslproto',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\sslproto.py',
+   'PYMODULE'),
+  ('asyncio.staggered',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\staggered.py',
+   'PYMODULE'),
+  ('asyncio.streams',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\streams.py',
+   'PYMODULE'),
+  ('asyncio.subprocess',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\subprocess.py',
+   'PYMODULE'),
+  ('asyncio.taskgroups',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\taskgroups.py',
+   'PYMODULE'),
+  ('asyncio.tasks',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\tasks.py',
+   'PYMODULE'),
+  ('asyncio.threads',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\threads.py',
+   'PYMODULE'),
+  ('asyncio.timeouts',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\timeouts.py',
+   'PYMODULE'),
+  ('asyncio.transports',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\transports.py',
+   'PYMODULE'),
+  ('asyncio.trsock',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\trsock.py',
+   'PYMODULE'),
+  ('asyncio.unix_events',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\unix_events.py',
+   'PYMODULE'),
+  ('asyncio.windows_events',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\windows_events.py',
+   'PYMODULE'),
+  ('asyncio.windows_utils',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\asyncio\\windows_utils.py',
+   'PYMODULE'),
+  ('backports',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\__init__.py',
+   'PYMODULE'),
+  ('base64', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\base64.py', 'PYMODULE'),
+  ('bisect', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\bisect.py', 'PYMODULE'),
+  ('bz2', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\bz2.py', 'PYMODULE'),
+  ('calendar', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\calendar.py', 'PYMODULE'),
+  ('certifi',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\certifi\\__init__.py',
+   'PYMODULE'),
+  ('certifi.core',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\certifi\\core.py',
+   'PYMODULE'),
+  ('colorsys', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\colorsys.py', 'PYMODULE'),
+  ('concurrent',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\concurrent\\__init__.py',
+   'PYMODULE'),
+  ('concurrent.futures',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\concurrent\\futures\\__init__.py',
+   'PYMODULE'),
+  ('concurrent.futures._base',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\concurrent\\futures\\_base.py',
+   'PYMODULE'),
+  ('concurrent.futures.process',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\concurrent\\futures\\process.py',
+   'PYMODULE'),
+  ('concurrent.futures.thread',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\concurrent\\futures\\thread.py',
+   'PYMODULE'),
+  ('configparser',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\configparser.py',
+   'PYMODULE'),
+  ('contextlib',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\contextlib.py',
+   'PYMODULE'),
+  ('contextvars',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\contextvars.py',
+   'PYMODULE'),
+  ('copy', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\copy.py', 'PYMODULE'),
+  ('csv', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\csv.py', 'PYMODULE'),
+  ('ctypes',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\ctypes\\__init__.py',
+   'PYMODULE'),
+  ('ctypes._endian',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\ctypes\\_endian.py',
+   'PYMODULE'),
+  ('ctypes.wintypes',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\ctypes\\wintypes.py',
+   'PYMODULE'),
+  ('dataclasses',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\dataclasses.py',
+   'PYMODULE'),
+  ('datetime', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\datetime.py', 'PYMODULE'),
+  ('decimal', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\decimal.py', 'PYMODULE'),
+  ('difflib', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\difflib.py', 'PYMODULE'),
+  ('dis', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\dis.py', 'PYMODULE'),
+  ('distro',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\distro\\__init__.py',
+   'PYMODULE'),
+  ('distro.distro',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\distro\\distro.py',
+   'PYMODULE'),
+  ('email',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\__init__.py',
+   'PYMODULE'),
+  ('email._encoded_words',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\_encoded_words.py',
+   'PYMODULE'),
+  ('email._header_value_parser',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\_header_value_parser.py',
+   'PYMODULE'),
+  ('email._parseaddr',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\_parseaddr.py',
+   'PYMODULE'),
+  ('email._policybase',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\_policybase.py',
+   'PYMODULE'),
+  ('email.base64mime',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\base64mime.py',
+   'PYMODULE'),
+  ('email.charset',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\charset.py',
+   'PYMODULE'),
+  ('email.contentmanager',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\contentmanager.py',
+   'PYMODULE'),
+  ('email.encoders',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\encoders.py',
+   'PYMODULE'),
+  ('email.errors',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\errors.py',
+   'PYMODULE'),
+  ('email.feedparser',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\feedparser.py',
+   'PYMODULE'),
+  ('email.generator',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\generator.py',
+   'PYMODULE'),
+  ('email.header',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\header.py',
+   'PYMODULE'),
+  ('email.headerregistry',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\headerregistry.py',
+   'PYMODULE'),
+  ('email.iterators',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\iterators.py',
+   'PYMODULE'),
+  ('email.message',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\message.py',
+   'PYMODULE'),
+  ('email.parser',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\parser.py',
+   'PYMODULE'),
+  ('email.policy',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\policy.py',
+   'PYMODULE'),
+  ('email.quoprimime',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\quoprimime.py',
+   'PYMODULE'),
+  ('email.utils',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\email\\utils.py',
+   'PYMODULE'),
+  ('fnmatch', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\fnmatch.py', 'PYMODULE'),
+  ('fractions',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\fractions.py',
+   'PYMODULE'),
+  ('ftplib', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\ftplib.py', 'PYMODULE'),
+  ('getopt', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\getopt.py', 'PYMODULE'),
+  ('getpass', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\getpass.py', 'PYMODULE'),
+  ('gettext', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\gettext.py', 'PYMODULE'),
+  ('glob', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\glob.py', 'PYMODULE'),
+  ('gzip', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\gzip.py', 'PYMODULE'),
+  ('h11',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\h11\\__init__.py',
+   'PYMODULE'),
+  ('h11._abnf',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\h11\\_abnf.py',
+   'PYMODULE'),
+  ('h11._connection',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\h11\\_connection.py',
+   'PYMODULE'),
+  ('h11._events',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\h11\\_events.py',
+   'PYMODULE'),
+  ('h11._headers',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\h11\\_headers.py',
+   'PYMODULE'),
+  ('h11._readers',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\h11\\_readers.py',
+   'PYMODULE'),
+  ('h11._receivebuffer',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\h11\\_receivebuffer.py',
+   'PYMODULE'),
+  ('h11._state',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\h11\\_state.py',
+   'PYMODULE'),
+  ('h11._util',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\h11\\_util.py',
+   'PYMODULE'),
+  ('h11._version',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\h11\\_version.py',
+   'PYMODULE'),
+  ('h11._writers',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\h11\\_writers.py',
+   'PYMODULE'),
+  ('hashlib', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\hashlib.py', 'PYMODULE'),
+  ('hmac', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\hmac.py', 'PYMODULE'),
+  ('html',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\html\\__init__.py',
+   'PYMODULE'),
+  ('html.entities',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\html\\entities.py',
+   'PYMODULE'),
+  ('http',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\http\\__init__.py',
+   'PYMODULE'),
+  ('http.client',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\http\\client.py',
+   'PYMODULE'),
+  ('http.cookiejar',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\http\\cookiejar.py',
+   'PYMODULE'),
+  ('http.server',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\http\\server.py',
+   'PYMODULE'),
+  ('httpcore',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\__init__.py',
+   'PYMODULE'),
+  ('httpcore._api',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_api.py',
+   'PYMODULE'),
+  ('httpcore._async',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_async\\__init__.py',
+   'PYMODULE'),
+  ('httpcore._async.connection',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_async\\connection.py',
+   'PYMODULE'),
+  ('httpcore._async.connection_pool',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_async\\connection_pool.py',
+   'PYMODULE'),
+  ('httpcore._async.http11',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_async\\http11.py',
+   'PYMODULE'),
+  ('httpcore._async.http2',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_async\\http2.py',
+   'PYMODULE'),
+  ('httpcore._async.http_proxy',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_async\\http_proxy.py',
+   'PYMODULE'),
+  ('httpcore._async.interfaces',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_async\\interfaces.py',
+   'PYMODULE'),
+  ('httpcore._async.socks_proxy',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_async\\socks_proxy.py',
+   'PYMODULE'),
+  ('httpcore._backends',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_backends\\__init__.py',
+   'PYMODULE'),
+  ('httpcore._backends.anyio',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_backends\\anyio.py',
+   'PYMODULE'),
+  ('httpcore._backends.auto',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_backends\\auto.py',
+   'PYMODULE'),
+  ('httpcore._backends.base',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_backends\\base.py',
+   'PYMODULE'),
+  ('httpcore._backends.mock',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_backends\\mock.py',
+   'PYMODULE'),
+  ('httpcore._backends.sync',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_backends\\sync.py',
+   'PYMODULE'),
+  ('httpcore._backends.trio',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_backends\\trio.py',
+   'PYMODULE'),
+  ('httpcore._exceptions',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_exceptions.py',
+   'PYMODULE'),
+  ('httpcore._models',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_models.py',
+   'PYMODULE'),
+  ('httpcore._ssl',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_ssl.py',
+   'PYMODULE'),
+  ('httpcore._sync',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_sync\\__init__.py',
+   'PYMODULE'),
+  ('httpcore._sync.connection',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_sync\\connection.py',
+   'PYMODULE'),
+  ('httpcore._sync.connection_pool',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_sync\\connection_pool.py',
+   'PYMODULE'),
+  ('httpcore._sync.http11',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_sync\\http11.py',
+   'PYMODULE'),
+  ('httpcore._sync.http2',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_sync\\http2.py',
+   'PYMODULE'),
+  ('httpcore._sync.http_proxy',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_sync\\http_proxy.py',
+   'PYMODULE'),
+  ('httpcore._sync.interfaces',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_sync\\interfaces.py',
+   'PYMODULE'),
+  ('httpcore._sync.socks_proxy',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_sync\\socks_proxy.py',
+   'PYMODULE'),
+  ('httpcore._synchronization',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_synchronization.py',
+   'PYMODULE'),
+  ('httpcore._trace',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_trace.py',
+   'PYMODULE'),
+  ('httpcore._utils',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpcore\\_utils.py',
+   'PYMODULE'),
+  ('httpx',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\__init__.py',
+   'PYMODULE'),
+  ('httpx.__version__',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\__version__.py',
+   'PYMODULE'),
+  ('httpx._api',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_api.py',
+   'PYMODULE'),
+  ('httpx._auth',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_auth.py',
+   'PYMODULE'),
+  ('httpx._client',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_client.py',
+   'PYMODULE'),
+  ('httpx._config',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_config.py',
+   'PYMODULE'),
+  ('httpx._content',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_content.py',
+   'PYMODULE'),
+  ('httpx._decoders',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_decoders.py',
+   'PYMODULE'),
+  ('httpx._exceptions',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_exceptions.py',
+   'PYMODULE'),
+  ('httpx._main',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_main.py',
+   'PYMODULE'),
+  ('httpx._models',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_models.py',
+   'PYMODULE'),
+  ('httpx._multipart',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_multipart.py',
+   'PYMODULE'),
+  ('httpx._status_codes',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_status_codes.py',
+   'PYMODULE'),
+  ('httpx._transports',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_transports\\__init__.py',
+   'PYMODULE'),
+  ('httpx._transports.asgi',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_transports\\asgi.py',
+   'PYMODULE'),
+  ('httpx._transports.base',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_transports\\base.py',
+   'PYMODULE'),
+  ('httpx._transports.default',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_transports\\default.py',
+   'PYMODULE'),
+  ('httpx._transports.mock',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_transports\\mock.py',
+   'PYMODULE'),
+  ('httpx._transports.wsgi',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_transports\\wsgi.py',
+   'PYMODULE'),
+  ('httpx._types',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_types.py',
+   'PYMODULE'),
+  ('httpx._urlparse',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_urlparse.py',
+   'PYMODULE'),
+  ('httpx._urls',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_urls.py',
+   'PYMODULE'),
+  ('httpx._utils',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\httpx\\_utils.py',
+   'PYMODULE'),
+  ('idna',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\idna\\__init__.py',
+   'PYMODULE'),
+  ('idna.core',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\idna\\core.py',
+   'PYMODULE'),
+  ('idna.idnadata',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\idna\\idnadata.py',
+   'PYMODULE'),
+  ('idna.intranges',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\idna\\intranges.py',
+   'PYMODULE'),
+  ('idna.package_data',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\idna\\package_data.py',
+   'PYMODULE'),
+  ('idna.uts46data',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\idna\\uts46data.py',
+   'PYMODULE'),
+  ('importlib',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\__init__.py',
+   'PYMODULE'),
+  ('importlib._abc',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\_abc.py',
+   'PYMODULE'),
+  ('importlib._bootstrap',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\_bootstrap.py',
+   'PYMODULE'),
+  ('importlib._bootstrap_external',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\_bootstrap_external.py',
+   'PYMODULE'),
+  ('importlib.abc',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\abc.py',
+   'PYMODULE'),
+  ('importlib.machinery',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\machinery.py',
+   'PYMODULE'),
+  ('importlib.metadata',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\metadata\\__init__.py',
+   'PYMODULE'),
+  ('importlib.metadata._adapters',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\metadata\\_adapters.py',
+   'PYMODULE'),
+  ('importlib.metadata._collections',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\metadata\\_collections.py',
+   'PYMODULE'),
+  ('importlib.metadata._functools',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\metadata\\_functools.py',
+   'PYMODULE'),
+  ('importlib.metadata._itertools',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\metadata\\_itertools.py',
+   'PYMODULE'),
+  ('importlib.metadata._meta',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\metadata\\_meta.py',
+   'PYMODULE'),
+  ('importlib.metadata._text',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\metadata\\_text.py',
+   'PYMODULE'),
+  ('importlib.readers',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\readers.py',
+   'PYMODULE'),
+  ('importlib.resources',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\resources\\__init__.py',
+   'PYMODULE'),
+  ('importlib.resources._adapters',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\resources\\_adapters.py',
+   'PYMODULE'),
+  ('importlib.resources._common',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\resources\\_common.py',
+   'PYMODULE'),
+  ('importlib.resources._itertools',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\resources\\_itertools.py',
+   'PYMODULE'),
+  ('importlib.resources._legacy',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\resources\\_legacy.py',
+   'PYMODULE'),
+  ('importlib.resources.abc',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\resources\\abc.py',
+   'PYMODULE'),
+  ('importlib.resources.readers',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\resources\\readers.py',
+   'PYMODULE'),
+  ('importlib.util',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\importlib\\util.py',
+   'PYMODULE'),
+  ('inspect', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\inspect.py', 'PYMODULE'),
+  ('ipaddress',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\ipaddress.py',
+   'PYMODULE'),
+  ('jaraco', '-', 'PYMODULE'),
+  ('jiter',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\jiter\\__init__.py',
+   'PYMODULE'),
+  ('json',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\json\\__init__.py',
+   'PYMODULE'),
+  ('json.decoder',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\json\\decoder.py',
+   'PYMODULE'),
+  ('json.encoder',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\json\\encoder.py',
+   'PYMODULE'),
+  ('json.scanner',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\json\\scanner.py',
+   'PYMODULE'),
+  ('logging',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\logging\\__init__.py',
+   'PYMODULE'),
+  ('lzma', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\lzma.py', 'PYMODULE'),
+  ('mimetypes',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\mimetypes.py',
+   'PYMODULE'),
+  ('multiprocessing',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\__init__.py',
+   'PYMODULE'),
+  ('multiprocessing.connection',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\connection.py',
+   'PYMODULE'),
+  ('multiprocessing.context',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\context.py',
+   'PYMODULE'),
+  ('multiprocessing.dummy',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\dummy\\__init__.py',
+   'PYMODULE'),
+  ('multiprocessing.dummy.connection',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\dummy\\connection.py',
+   'PYMODULE'),
+  ('multiprocessing.forkserver',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\forkserver.py',
+   'PYMODULE'),
+  ('multiprocessing.heap',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\heap.py',
+   'PYMODULE'),
+  ('multiprocessing.managers',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\managers.py',
+   'PYMODULE'),
+  ('multiprocessing.pool',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\pool.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_fork',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\popen_fork.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_forkserver',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\popen_forkserver.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_spawn_posix',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\popen_spawn_posix.py',
+   'PYMODULE'),
+  ('multiprocessing.popen_spawn_win32',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\popen_spawn_win32.py',
+   'PYMODULE'),
+  ('multiprocessing.process',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\process.py',
+   'PYMODULE'),
+  ('multiprocessing.queues',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\queues.py',
+   'PYMODULE'),
+  ('multiprocessing.reduction',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\reduction.py',
+   'PYMODULE'),
+  ('multiprocessing.resource_sharer',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\resource_sharer.py',
+   'PYMODULE'),
+  ('multiprocessing.resource_tracker',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\resource_tracker.py',
+   'PYMODULE'),
+  ('multiprocessing.shared_memory',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\shared_memory.py',
+   'PYMODULE'),
+  ('multiprocessing.sharedctypes',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\sharedctypes.py',
+   'PYMODULE'),
+  ('multiprocessing.spawn',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\spawn.py',
+   'PYMODULE'),
+  ('multiprocessing.synchronize',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\synchronize.py',
+   'PYMODULE'),
+  ('multiprocessing.util',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\multiprocessing\\util.py',
+   'PYMODULE'),
+  ('netrc', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\netrc.py', 'PYMODULE'),
+  ('nturl2path',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\nturl2path.py',
+   'PYMODULE'),
+  ('numbers', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\numbers.py', 'PYMODULE'),
+  ('opcode', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\opcode.py', 'PYMODULE'),
+  ('openai',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\__init__.py',
+   'PYMODULE'),
+  ('openai._base_client',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_base_client.py',
+   'PYMODULE'),
+  ('openai._client',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_client.py',
+   'PYMODULE'),
+  ('openai._compat',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_compat.py',
+   'PYMODULE'),
+  ('openai._constants',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_constants.py',
+   'PYMODULE'),
+  ('openai._exceptions',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_exceptions.py',
+   'PYMODULE'),
+  ('openai._extras',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_extras\\__init__.py',
+   'PYMODULE'),
+  ('openai._extras._common',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_extras\\_common.py',
+   'PYMODULE'),
+  ('openai._extras.numpy_proxy',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_extras\\numpy_proxy.py',
+   'PYMODULE'),
+  ('openai._extras.pandas_proxy',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_extras\\pandas_proxy.py',
+   'PYMODULE'),
+  ('openai._files',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_files.py',
+   'PYMODULE'),
+  ('openai._legacy_response',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_legacy_response.py',
+   'PYMODULE'),
+  ('openai._models',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_models.py',
+   'PYMODULE'),
+  ('openai._module_client',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_module_client.py',
+   'PYMODULE'),
+  ('openai._qs',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_qs.py',
+   'PYMODULE'),
+  ('openai._resource',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_resource.py',
+   'PYMODULE'),
+  ('openai._response',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_response.py',
+   'PYMODULE'),
+  ('openai._streaming',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_streaming.py',
+   'PYMODULE'),
+  ('openai._types',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_types.py',
+   'PYMODULE'),
+  ('openai._utils',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_utils\\__init__.py',
+   'PYMODULE'),
+  ('openai._utils._logs',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_utils\\_logs.py',
+   'PYMODULE'),
+  ('openai._utils._proxy',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_utils\\_proxy.py',
+   'PYMODULE'),
+  ('openai._utils._reflection',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_utils\\_reflection.py',
+   'PYMODULE'),
+  ('openai._utils._streams',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_utils\\_streams.py',
+   'PYMODULE'),
+  ('openai._utils._sync',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_utils\\_sync.py',
+   'PYMODULE'),
+  ('openai._utils._transform',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_utils\\_transform.py',
+   'PYMODULE'),
+  ('openai._utils._typing',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_utils\\_typing.py',
+   'PYMODULE'),
+  ('openai._utils._utils',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_utils\\_utils.py',
+   'PYMODULE'),
+  ('openai._version',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\_version.py',
+   'PYMODULE'),
+  ('openai.lib',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\lib\\__init__.py',
+   'PYMODULE'),
+  ('openai.lib._old_api',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\lib\\_old_api.py',
+   'PYMODULE'),
+  ('openai.lib._parsing',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\lib\\_parsing\\__init__.py',
+   'PYMODULE'),
+  ('openai.lib._parsing._completions',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\lib\\_parsing\\_completions.py',
+   'PYMODULE'),
+  ('openai.lib._pydantic',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\lib\\_pydantic.py',
+   'PYMODULE'),
+  ('openai.lib._tools',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\lib\\_tools.py',
+   'PYMODULE'),
+  ('openai.lib.azure',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\lib\\azure.py',
+   'PYMODULE'),
+  ('openai.lib.streaming',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\lib\\streaming\\__init__.py',
+   'PYMODULE'),
+  ('openai.lib.streaming._assistants',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\lib\\streaming\\_assistants.py',
+   'PYMODULE'),
+  ('openai.lib.streaming._deltas',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\lib\\streaming\\_deltas.py',
+   'PYMODULE'),
+  ('openai.lib.streaming.chat',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\lib\\streaming\\chat\\__init__.py',
+   'PYMODULE'),
+  ('openai.lib.streaming.chat._completions',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\lib\\streaming\\chat\\_completions.py',
+   'PYMODULE'),
+  ('openai.lib.streaming.chat._events',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\lib\\streaming\\chat\\_events.py',
+   'PYMODULE'),
+  ('openai.lib.streaming.chat._types',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\lib\\streaming\\chat\\_types.py',
+   'PYMODULE'),
+  ('openai.pagination',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\pagination.py',
+   'PYMODULE'),
+  ('openai.resources',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\__init__.py',
+   'PYMODULE'),
+  ('openai.resources.audio',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\audio\\__init__.py',
+   'PYMODULE'),
+  ('openai.resources.audio.audio',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\audio\\audio.py',
+   'PYMODULE'),
+  ('openai.resources.audio.speech',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\audio\\speech.py',
+   'PYMODULE'),
+  ('openai.resources.audio.transcriptions',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\audio\\transcriptions.py',
+   'PYMODULE'),
+  ('openai.resources.audio.translations',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\audio\\translations.py',
+   'PYMODULE'),
+  ('openai.resources.batches',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\batches.py',
+   'PYMODULE'),
+  ('openai.resources.beta',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\beta\\__init__.py',
+   'PYMODULE'),
+  ('openai.resources.beta.assistants',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\beta\\assistants.py',
+   'PYMODULE'),
+  ('openai.resources.beta.beta',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\beta\\beta.py',
+   'PYMODULE'),
+  ('openai.resources.beta.chat',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\beta\\chat\\__init__.py',
+   'PYMODULE'),
+  ('openai.resources.beta.chat.chat',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\beta\\chat\\chat.py',
+   'PYMODULE'),
+  ('openai.resources.beta.chat.completions',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\beta\\chat\\completions.py',
+   'PYMODULE'),
+  ('openai.resources.beta.threads',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\beta\\threads\\__init__.py',
+   'PYMODULE'),
+  ('openai.resources.beta.threads.messages',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\beta\\threads\\messages.py',
+   'PYMODULE'),
+  ('openai.resources.beta.threads.runs',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\beta\\threads\\runs\\__init__.py',
+   'PYMODULE'),
+  ('openai.resources.beta.threads.runs.runs',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\beta\\threads\\runs\\runs.py',
+   'PYMODULE'),
+  ('openai.resources.beta.threads.runs.steps',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\beta\\threads\\runs\\steps.py',
+   'PYMODULE'),
+  ('openai.resources.beta.threads.threads',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\beta\\threads\\threads.py',
+   'PYMODULE'),
+  ('openai.resources.beta.vector_stores',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\beta\\vector_stores\\__init__.py',
+   'PYMODULE'),
+  ('openai.resources.beta.vector_stores.file_batches',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\beta\\vector_stores\\file_batches.py',
+   'PYMODULE'),
+  ('openai.resources.beta.vector_stores.files',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\beta\\vector_stores\\files.py',
+   'PYMODULE'),
+  ('openai.resources.beta.vector_stores.vector_stores',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\beta\\vector_stores\\vector_stores.py',
+   'PYMODULE'),
+  ('openai.resources.chat',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\chat\\__init__.py',
+   'PYMODULE'),
+  ('openai.resources.chat.chat',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\chat\\chat.py',
+   'PYMODULE'),
+  ('openai.resources.chat.completions',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\chat\\completions.py',
+   'PYMODULE'),
+  ('openai.resources.completions',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\completions.py',
+   'PYMODULE'),
+  ('openai.resources.embeddings',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\embeddings.py',
+   'PYMODULE'),
+  ('openai.resources.files',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\files.py',
+   'PYMODULE'),
+  ('openai.resources.fine_tuning',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\fine_tuning\\__init__.py',
+   'PYMODULE'),
+  ('openai.resources.fine_tuning.fine_tuning',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\fine_tuning\\fine_tuning.py',
+   'PYMODULE'),
+  ('openai.resources.fine_tuning.jobs',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\fine_tuning\\jobs\\__init__.py',
+   'PYMODULE'),
+  ('openai.resources.fine_tuning.jobs.checkpoints',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\fine_tuning\\jobs\\checkpoints.py',
+   'PYMODULE'),
+  ('openai.resources.fine_tuning.jobs.jobs',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\fine_tuning\\jobs\\jobs.py',
+   'PYMODULE'),
+  ('openai.resources.images',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\images.py',
+   'PYMODULE'),
+  ('openai.resources.models',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\models.py',
+   'PYMODULE'),
+  ('openai.resources.moderations',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\moderations.py',
+   'PYMODULE'),
+  ('openai.resources.uploads',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\uploads\\__init__.py',
+   'PYMODULE'),
+  ('openai.resources.uploads.parts',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\uploads\\parts.py',
+   'PYMODULE'),
+  ('openai.resources.uploads.uploads',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\resources\\uploads\\uploads.py',
+   'PYMODULE'),
+  ('openai.types',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\__init__.py',
+   'PYMODULE'),
+  ('openai.types.audio',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\audio\\__init__.py',
+   'PYMODULE'),
+  ('openai.types.audio.speech_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\audio\\speech_create_params.py',
+   'PYMODULE'),
+  ('openai.types.audio.speech_model',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\audio\\speech_model.py',
+   'PYMODULE'),
+  ('openai.types.audio.transcription',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\audio\\transcription.py',
+   'PYMODULE'),
+  ('openai.types.audio.transcription_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\audio\\transcription_create_params.py',
+   'PYMODULE'),
+  ('openai.types.audio.transcription_create_response',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\audio\\transcription_create_response.py',
+   'PYMODULE'),
+  ('openai.types.audio.transcription_segment',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\audio\\transcription_segment.py',
+   'PYMODULE'),
+  ('openai.types.audio.transcription_verbose',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\audio\\transcription_verbose.py',
+   'PYMODULE'),
+  ('openai.types.audio.transcription_word',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\audio\\transcription_word.py',
+   'PYMODULE'),
+  ('openai.types.audio.translation',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\audio\\translation.py',
+   'PYMODULE'),
+  ('openai.types.audio.translation_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\audio\\translation_create_params.py',
+   'PYMODULE'),
+  ('openai.types.audio.translation_create_response',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\audio\\translation_create_response.py',
+   'PYMODULE'),
+  ('openai.types.audio.translation_verbose',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\audio\\translation_verbose.py',
+   'PYMODULE'),
+  ('openai.types.audio_model',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\audio_model.py',
+   'PYMODULE'),
+  ('openai.types.audio_response_format',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\audio_response_format.py',
+   'PYMODULE'),
+  ('openai.types.batch',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\batch.py',
+   'PYMODULE'),
+  ('openai.types.batch_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\batch_create_params.py',
+   'PYMODULE'),
+  ('openai.types.batch_error',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\batch_error.py',
+   'PYMODULE'),
+  ('openai.types.batch_list_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\batch_list_params.py',
+   'PYMODULE'),
+  ('openai.types.batch_request_counts',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\batch_request_counts.py',
+   'PYMODULE'),
+  ('openai.types.beta',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\__init__.py',
+   'PYMODULE'),
+  ('openai.types.beta.assistant',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\assistant.py',
+   'PYMODULE'),
+  ('openai.types.beta.assistant_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\assistant_create_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.assistant_deleted',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\assistant_deleted.py',
+   'PYMODULE'),
+  ('openai.types.beta.assistant_list_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\assistant_list_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.assistant_response_format_option',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\assistant_response_format_option.py',
+   'PYMODULE'),
+  ('openai.types.beta.assistant_response_format_option_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\assistant_response_format_option_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.assistant_stream_event',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\assistant_stream_event.py',
+   'PYMODULE'),
+  ('openai.types.beta.assistant_tool',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\assistant_tool.py',
+   'PYMODULE'),
+  ('openai.types.beta.assistant_tool_choice',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\assistant_tool_choice.py',
+   'PYMODULE'),
+  ('openai.types.beta.assistant_tool_choice_function',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\assistant_tool_choice_function.py',
+   'PYMODULE'),
+  ('openai.types.beta.assistant_tool_choice_function_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\assistant_tool_choice_function_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.assistant_tool_choice_option',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\assistant_tool_choice_option.py',
+   'PYMODULE'),
+  ('openai.types.beta.assistant_tool_choice_option_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\assistant_tool_choice_option_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.assistant_tool_choice_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\assistant_tool_choice_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.assistant_tool_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\assistant_tool_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.assistant_update_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\assistant_update_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.auto_file_chunking_strategy_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\auto_file_chunking_strategy_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.code_interpreter_tool',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\code_interpreter_tool.py',
+   'PYMODULE'),
+  ('openai.types.beta.code_interpreter_tool_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\code_interpreter_tool_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.file_chunking_strategy',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\file_chunking_strategy.py',
+   'PYMODULE'),
+  ('openai.types.beta.file_chunking_strategy_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\file_chunking_strategy_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.file_search_tool',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\file_search_tool.py',
+   'PYMODULE'),
+  ('openai.types.beta.file_search_tool_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\file_search_tool_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.function_tool',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\function_tool.py',
+   'PYMODULE'),
+  ('openai.types.beta.function_tool_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\function_tool_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.other_file_chunking_strategy_object',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\other_file_chunking_strategy_object.py',
+   'PYMODULE'),
+  ('openai.types.beta.static_file_chunking_strategy',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\static_file_chunking_strategy.py',
+   'PYMODULE'),
+  ('openai.types.beta.static_file_chunking_strategy_object',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\static_file_chunking_strategy_object.py',
+   'PYMODULE'),
+  ('openai.types.beta.static_file_chunking_strategy_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\static_file_chunking_strategy_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.thread',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\thread.py',
+   'PYMODULE'),
+  ('openai.types.beta.thread_create_and_run_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\thread_create_and_run_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.thread_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\thread_create_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.thread_deleted',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\thread_deleted.py',
+   'PYMODULE'),
+  ('openai.types.beta.thread_update_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\thread_update_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\__init__.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.annotation',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\annotation.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.annotation_delta',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\annotation_delta.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.file_citation_annotation',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\file_citation_annotation.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.file_citation_delta_annotation',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\file_citation_delta_annotation.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.file_path_annotation',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\file_path_annotation.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.file_path_delta_annotation',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\file_path_delta_annotation.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.image_file',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_file.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.image_file_content_block',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_file_content_block.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.image_file_content_block_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_file_content_block_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.image_file_delta',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_file_delta.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.image_file_delta_block',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_file_delta_block.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.image_file_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_file_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.image_url',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_url.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.image_url_content_block',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_url_content_block.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.image_url_content_block_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_url_content_block_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.image_url_delta',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_url_delta.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.image_url_delta_block',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_url_delta_block.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.image_url_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\image_url_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.message',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.message_content',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_content.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.message_content_delta',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_content_delta.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.message_content_part_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_content_part_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.message_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_create_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.message_deleted',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_deleted.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.message_delta',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_delta.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.message_delta_event',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_delta_event.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.message_list_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_list_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.message_update_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\message_update_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.refusal_content_block',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\refusal_content_block.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.refusal_delta_block',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\refusal_delta_block.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.required_action_function_tool_call',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\required_action_function_tool_call.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.run',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\run.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.run_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\run_create_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.run_list_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\run_list_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.run_status',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\run_status.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.run_submit_tool_outputs_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\run_submit_tool_outputs_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.run_update_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\run_update_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\__init__.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.code_interpreter_logs',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\code_interpreter_logs.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.code_interpreter_output_image',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\code_interpreter_output_image.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.code_interpreter_tool_call',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\code_interpreter_tool_call.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.code_interpreter_tool_call_delta',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\code_interpreter_tool_call_delta.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.file_search_tool_call',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\file_search_tool_call.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.file_search_tool_call_delta',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\file_search_tool_call_delta.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.function_tool_call',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\function_tool_call.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.function_tool_call_delta',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\function_tool_call_delta.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.message_creation_step_details',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\message_creation_step_details.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.run_step',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\run_step.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.run_step_delta',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\run_step_delta.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.run_step_delta_event',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\run_step_delta_event.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.run_step_delta_message_delta',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\run_step_delta_message_delta.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.run_step_include',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\run_step_include.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.step_list_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\step_list_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.step_retrieve_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\step_retrieve_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.tool_call',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\tool_call.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.tool_call_delta',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\tool_call_delta.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.tool_call_delta_object',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\tool_call_delta_object.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.runs.tool_calls_step_details',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\runs\\tool_calls_step_details.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.text',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\text.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.text_content_block',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\text_content_block.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.text_content_block_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\text_content_block_param.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.text_delta',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\text_delta.py',
+   'PYMODULE'),
+  ('openai.types.beta.threads.text_delta_block',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\threads\\text_delta_block.py',
+   'PYMODULE'),
+  ('openai.types.beta.vector_store',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\vector_store.py',
+   'PYMODULE'),
+  ('openai.types.beta.vector_store_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\vector_store_create_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.vector_store_deleted',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\vector_store_deleted.py',
+   'PYMODULE'),
+  ('openai.types.beta.vector_store_list_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\vector_store_list_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.vector_store_update_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\vector_store_update_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.vector_stores',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\vector_stores\\__init__.py',
+   'PYMODULE'),
+  ('openai.types.beta.vector_stores.file_batch_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\vector_stores\\file_batch_create_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.vector_stores.file_batch_list_files_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\vector_stores\\file_batch_list_files_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.vector_stores.file_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\vector_stores\\file_create_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.vector_stores.file_list_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\vector_stores\\file_list_params.py',
+   'PYMODULE'),
+  ('openai.types.beta.vector_stores.vector_store_file',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\vector_stores\\vector_store_file.py',
+   'PYMODULE'),
+  ('openai.types.beta.vector_stores.vector_store_file_batch',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\vector_stores\\vector_store_file_batch.py',
+   'PYMODULE'),
+  ('openai.types.beta.vector_stores.vector_store_file_deleted',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\beta\\vector_stores\\vector_store_file_deleted.py',
+   'PYMODULE'),
+  ('openai.types.chat',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\__init__.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_assistant_message_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_assistant_message_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_audio',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_audio.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_audio_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_audio_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_chunk',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_chunk.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_content_part_image_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_content_part_image_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_content_part_input_audio_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_content_part_input_audio_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_content_part_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_content_part_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_content_part_refusal_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_content_part_refusal_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_content_part_text_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_content_part_text_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_function_call_option_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_function_call_option_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_function_message_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_function_message_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_message',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_message.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_message_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_message_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_message_tool_call',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_message_tool_call.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_message_tool_call_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_message_tool_call_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_modality',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_modality.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_named_tool_choice_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_named_tool_choice_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_prediction_content_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_prediction_content_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_role',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_role.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_stream_options_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_stream_options_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_system_message_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_system_message_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_token_logprob',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_token_logprob.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_tool_choice_option_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_tool_choice_option_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_tool_message_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_tool_message_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_tool_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_tool_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.chat_completion_user_message_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\chat_completion_user_message_param.py',
+   'PYMODULE'),
+  ('openai.types.chat.completion_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\completion_create_params.py',
+   'PYMODULE'),
+  ('openai.types.chat.parsed_chat_completion',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\parsed_chat_completion.py',
+   'PYMODULE'),
+  ('openai.types.chat.parsed_function_tool_call',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat\\parsed_function_tool_call.py',
+   'PYMODULE'),
+  ('openai.types.chat_model',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\chat_model.py',
+   'PYMODULE'),
+  ('openai.types.completion',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\completion.py',
+   'PYMODULE'),
+  ('openai.types.completion_choice',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\completion_choice.py',
+   'PYMODULE'),
+  ('openai.types.completion_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\completion_create_params.py',
+   'PYMODULE'),
+  ('openai.types.completion_usage',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\completion_usage.py',
+   'PYMODULE'),
+  ('openai.types.create_embedding_response',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\create_embedding_response.py',
+   'PYMODULE'),
+  ('openai.types.embedding',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\embedding.py',
+   'PYMODULE'),
+  ('openai.types.embedding_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\embedding_create_params.py',
+   'PYMODULE'),
+  ('openai.types.embedding_model',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\embedding_model.py',
+   'PYMODULE'),
+  ('openai.types.file_content',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\file_content.py',
+   'PYMODULE'),
+  ('openai.types.file_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\file_create_params.py',
+   'PYMODULE'),
+  ('openai.types.file_deleted',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\file_deleted.py',
+   'PYMODULE'),
+  ('openai.types.file_list_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\file_list_params.py',
+   'PYMODULE'),
+  ('openai.types.file_object',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\file_object.py',
+   'PYMODULE'),
+  ('openai.types.file_purpose',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\file_purpose.py',
+   'PYMODULE'),
+  ('openai.types.fine_tuning',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\fine_tuning\\__init__.py',
+   'PYMODULE'),
+  ('openai.types.fine_tuning.fine_tuning_job',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\fine_tuning\\fine_tuning_job.py',
+   'PYMODULE'),
+  ('openai.types.fine_tuning.fine_tuning_job_event',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\fine_tuning\\fine_tuning_job_event.py',
+   'PYMODULE'),
+  ('openai.types.fine_tuning.fine_tuning_job_integration',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\fine_tuning\\fine_tuning_job_integration.py',
+   'PYMODULE'),
+  ('openai.types.fine_tuning.fine_tuning_job_wandb_integration',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\fine_tuning\\fine_tuning_job_wandb_integration.py',
+   'PYMODULE'),
+  ('openai.types.fine_tuning.fine_tuning_job_wandb_integration_object',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\fine_tuning\\fine_tuning_job_wandb_integration_object.py',
+   'PYMODULE'),
+  ('openai.types.fine_tuning.job_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\fine_tuning\\job_create_params.py',
+   'PYMODULE'),
+  ('openai.types.fine_tuning.job_list_events_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\fine_tuning\\job_list_events_params.py',
+   'PYMODULE'),
+  ('openai.types.fine_tuning.job_list_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\fine_tuning\\job_list_params.py',
+   'PYMODULE'),
+  ('openai.types.fine_tuning.jobs',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\fine_tuning\\jobs\\__init__.py',
+   'PYMODULE'),
+  ('openai.types.fine_tuning.jobs.checkpoint_list_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\fine_tuning\\jobs\\checkpoint_list_params.py',
+   'PYMODULE'),
+  ('openai.types.fine_tuning.jobs.fine_tuning_job_checkpoint',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\fine_tuning\\jobs\\fine_tuning_job_checkpoint.py',
+   'PYMODULE'),
+  ('openai.types.image',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\image.py',
+   'PYMODULE'),
+  ('openai.types.image_create_variation_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\image_create_variation_params.py',
+   'PYMODULE'),
+  ('openai.types.image_edit_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\image_edit_params.py',
+   'PYMODULE'),
+  ('openai.types.image_generate_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\image_generate_params.py',
+   'PYMODULE'),
+  ('openai.types.image_model',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\image_model.py',
+   'PYMODULE'),
+  ('openai.types.images_response',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\images_response.py',
+   'PYMODULE'),
+  ('openai.types.model',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\model.py',
+   'PYMODULE'),
+  ('openai.types.model_deleted',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\model_deleted.py',
+   'PYMODULE'),
+  ('openai.types.moderation',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\moderation.py',
+   'PYMODULE'),
+  ('openai.types.moderation_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\moderation_create_params.py',
+   'PYMODULE'),
+  ('openai.types.moderation_create_response',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\moderation_create_response.py',
+   'PYMODULE'),
+  ('openai.types.moderation_image_url_input_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\moderation_image_url_input_param.py',
+   'PYMODULE'),
+  ('openai.types.moderation_model',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\moderation_model.py',
+   'PYMODULE'),
+  ('openai.types.moderation_multi_modal_input_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\moderation_multi_modal_input_param.py',
+   'PYMODULE'),
+  ('openai.types.moderation_text_input_param',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\moderation_text_input_param.py',
+   'PYMODULE'),
+  ('openai.types.shared',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\shared\\__init__.py',
+   'PYMODULE'),
+  ('openai.types.shared.error_object',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\shared\\error_object.py',
+   'PYMODULE'),
+  ('openai.types.shared.function_definition',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\shared\\function_definition.py',
+   'PYMODULE'),
+  ('openai.types.shared.function_parameters',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\shared\\function_parameters.py',
+   'PYMODULE'),
+  ('openai.types.shared.response_format_json_object',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\shared\\response_format_json_object.py',
+   'PYMODULE'),
+  ('openai.types.shared.response_format_json_schema',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\shared\\response_format_json_schema.py',
+   'PYMODULE'),
+  ('openai.types.shared.response_format_text',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\shared\\response_format_text.py',
+   'PYMODULE'),
+  ('openai.types.shared_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\shared_params\\__init__.py',
+   'PYMODULE'),
+  ('openai.types.shared_params.function_definition',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\shared_params\\function_definition.py',
+   'PYMODULE'),
+  ('openai.types.shared_params.function_parameters',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\shared_params\\function_parameters.py',
+   'PYMODULE'),
+  ('openai.types.shared_params.response_format_json_object',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\shared_params\\response_format_json_object.py',
+   'PYMODULE'),
+  ('openai.types.shared_params.response_format_json_schema',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\shared_params\\response_format_json_schema.py',
+   'PYMODULE'),
+  ('openai.types.shared_params.response_format_text',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\shared_params\\response_format_text.py',
+   'PYMODULE'),
+  ('openai.types.upload',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\upload.py',
+   'PYMODULE'),
+  ('openai.types.upload_complete_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\upload_complete_params.py',
+   'PYMODULE'),
+  ('openai.types.upload_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\upload_create_params.py',
+   'PYMODULE'),
+  ('openai.types.uploads',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\uploads\\__init__.py',
+   'PYMODULE'),
+  ('openai.types.uploads.part_create_params',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\uploads\\part_create_params.py',
+   'PYMODULE'),
+  ('openai.types.uploads.upload_part',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\types\\uploads\\upload_part.py',
+   'PYMODULE'),
+  ('openai.version',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\openai\\version.py',
+   'PYMODULE'),
+  ('packaging',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('packaging._elffile',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\packaging\\_elffile.py',
+   'PYMODULE'),
+  ('packaging._manylinux',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\packaging\\_manylinux.py',
+   'PYMODULE'),
+  ('packaging._musllinux',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\packaging\\_musllinux.py',
+   'PYMODULE'),
+  ('packaging._parser',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\packaging\\_parser.py',
+   'PYMODULE'),
+  ('packaging._structures',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\packaging\\_structures.py',
+   'PYMODULE'),
+  ('packaging._tokenizer',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\packaging\\_tokenizer.py',
+   'PYMODULE'),
+  ('packaging.licenses',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\packaging\\licenses\\__init__.py',
+   'PYMODULE'),
+  ('packaging.licenses._spdx',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\packaging\\licenses\\_spdx.py',
+   'PYMODULE'),
+  ('packaging.markers',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\packaging\\markers.py',
+   'PYMODULE'),
+  ('packaging.metadata',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\packaging\\metadata.py',
+   'PYMODULE'),
+  ('packaging.requirements',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('packaging.specifiers',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('packaging.tags',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\packaging\\tags.py',
+   'PYMODULE'),
+  ('packaging.utils',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\packaging\\utils.py',
+   'PYMODULE'),
+  ('packaging.version',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\packaging\\version.py',
+   'PYMODULE'),
+  ('pathlib', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\pathlib.py', 'PYMODULE'),
+  ('pickle', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\pickle.py', 'PYMODULE'),
+  ('pkg_resources',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pkg_resources\\__init__.py',
+   'PYMODULE'),
+  ('pkgutil', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\pkgutil.py', 'PYMODULE'),
+  ('platform', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\platform.py', 'PYMODULE'),
+  ('plistlib', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\plistlib.py', 'PYMODULE'),
+  ('pprint', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\pprint.py', 'PYMODULE'),
+  ('processors',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - 打包\\processors\\__init__.py',
+   'PYMODULE'),
+  ('processors.image_encoder',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - 打包\\processors\\image_encoder.py',
+   'PYMODULE'),
+  ('processors.markdown_processor',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\processors\\markdown_processor.py',
+   'PYMODULE'),
+  ('py_compile',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\py_compile.py',
+   'PYMODULE'),
+  ('pydantic',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\__init__.py',
+   'PYMODULE'),
+  ('pydantic._internal',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\__init__.py',
+   'PYMODULE'),
+  ('pydantic._internal._config',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_config.py',
+   'PYMODULE'),
+  ('pydantic._internal._core_metadata',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_core_metadata.py',
+   'PYMODULE'),
+  ('pydantic._internal._core_utils',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_core_utils.py',
+   'PYMODULE'),
+  ('pydantic._internal._dataclasses',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_dataclasses.py',
+   'PYMODULE'),
+  ('pydantic._internal._decorators',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_decorators.py',
+   'PYMODULE'),
+  ('pydantic._internal._decorators_v1',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_decorators_v1.py',
+   'PYMODULE'),
+  ('pydantic._internal._discriminated_union',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_discriminated_union.py',
+   'PYMODULE'),
+  ('pydantic._internal._docs_extraction',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_docs_extraction.py',
+   'PYMODULE'),
+  ('pydantic._internal._fields',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_fields.py',
+   'PYMODULE'),
+  ('pydantic._internal._forward_ref',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_forward_ref.py',
+   'PYMODULE'),
+  ('pydantic._internal._generate_schema',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_generate_schema.py',
+   'PYMODULE'),
+  ('pydantic._internal._generics',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_generics.py',
+   'PYMODULE'),
+  ('pydantic._internal._git',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_git.py',
+   'PYMODULE'),
+  ('pydantic._internal._import_utils',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_import_utils.py',
+   'PYMODULE'),
+  ('pydantic._internal._internal_dataclass',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_internal_dataclass.py',
+   'PYMODULE'),
+  ('pydantic._internal._known_annotated_metadata',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_known_annotated_metadata.py',
+   'PYMODULE'),
+  ('pydantic._internal._mock_val_ser',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_mock_val_ser.py',
+   'PYMODULE'),
+  ('pydantic._internal._model_construction',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_model_construction.py',
+   'PYMODULE'),
+  ('pydantic._internal._namespace_utils',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_namespace_utils.py',
+   'PYMODULE'),
+  ('pydantic._internal._repr',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_repr.py',
+   'PYMODULE'),
+  ('pydantic._internal._schema_generation_shared',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_schema_generation_shared.py',
+   'PYMODULE'),
+  ('pydantic._internal._serializers',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_serializers.py',
+   'PYMODULE'),
+  ('pydantic._internal._signature',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_signature.py',
+   'PYMODULE'),
+  ('pydantic._internal._std_types_schema',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_std_types_schema.py',
+   'PYMODULE'),
+  ('pydantic._internal._typing_extra',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_typing_extra.py',
+   'PYMODULE'),
+  ('pydantic._internal._utils',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_utils.py',
+   'PYMODULE'),
+  ('pydantic._internal._validate_call',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_validate_call.py',
+   'PYMODULE'),
+  ('pydantic._internal._validators',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_internal\\_validators.py',
+   'PYMODULE'),
+  ('pydantic._migration',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\_migration.py',
+   'PYMODULE'),
+  ('pydantic.aliases',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\aliases.py',
+   'PYMODULE'),
+  ('pydantic.annotated_handlers',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\annotated_handlers.py',
+   'PYMODULE'),
+  ('pydantic.color',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\color.py',
+   'PYMODULE'),
+  ('pydantic.config',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\config.py',
+   'PYMODULE'),
+  ('pydantic.dataclasses',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\dataclasses.py',
+   'PYMODULE'),
+  ('pydantic.datetime_parse',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\datetime_parse.py',
+   'PYMODULE'),
+  ('pydantic.deprecated',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\deprecated\\__init__.py',
+   'PYMODULE'),
+  ('pydantic.deprecated.class_validators',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\deprecated\\class_validators.py',
+   'PYMODULE'),
+  ('pydantic.deprecated.config',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\deprecated\\config.py',
+   'PYMODULE'),
+  ('pydantic.deprecated.copy_internals',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\deprecated\\copy_internals.py',
+   'PYMODULE'),
+  ('pydantic.deprecated.json',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\deprecated\\json.py',
+   'PYMODULE'),
+  ('pydantic.deprecated.parse',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\deprecated\\parse.py',
+   'PYMODULE'),
+  ('pydantic.deprecated.tools',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\deprecated\\tools.py',
+   'PYMODULE'),
+  ('pydantic.errors',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\errors.py',
+   'PYMODULE'),
+  ('pydantic.fields',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\fields.py',
+   'PYMODULE'),
+  ('pydantic.functional_serializers',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\functional_serializers.py',
+   'PYMODULE'),
+  ('pydantic.functional_validators',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\functional_validators.py',
+   'PYMODULE'),
+  ('pydantic.generics',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\generics.py',
+   'PYMODULE'),
+  ('pydantic.json_schema',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\json_schema.py',
+   'PYMODULE'),
+  ('pydantic.main',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\main.py',
+   'PYMODULE'),
+  ('pydantic.networks',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\networks.py',
+   'PYMODULE'),
+  ('pydantic.plugin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\plugin\\__init__.py',
+   'PYMODULE'),
+  ('pydantic.plugin._loader',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\plugin\\_loader.py',
+   'PYMODULE'),
+  ('pydantic.plugin._schema_validator',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\plugin\\_schema_validator.py',
+   'PYMODULE'),
+  ('pydantic.root_model',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\root_model.py',
+   'PYMODULE'),
+  ('pydantic.type_adapter',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\type_adapter.py',
+   'PYMODULE'),
+  ('pydantic.types',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\types.py',
+   'PYMODULE'),
+  ('pydantic.typing',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\typing.py',
+   'PYMODULE'),
+  ('pydantic.v1',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\__init__.py',
+   'PYMODULE'),
+  ('pydantic.v1.annotated_types',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\annotated_types.py',
+   'PYMODULE'),
+  ('pydantic.v1.class_validators',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\class_validators.py',
+   'PYMODULE'),
+  ('pydantic.v1.color',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\color.py',
+   'PYMODULE'),
+  ('pydantic.v1.config',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\config.py',
+   'PYMODULE'),
+  ('pydantic.v1.dataclasses',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\dataclasses.py',
+   'PYMODULE'),
+  ('pydantic.v1.datetime_parse',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\datetime_parse.py',
+   'PYMODULE'),
+  ('pydantic.v1.decorator',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\decorator.py',
+   'PYMODULE'),
+  ('pydantic.v1.env_settings',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\env_settings.py',
+   'PYMODULE'),
+  ('pydantic.v1.error_wrappers',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\error_wrappers.py',
+   'PYMODULE'),
+  ('pydantic.v1.errors',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\errors.py',
+   'PYMODULE'),
+  ('pydantic.v1.fields',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\fields.py',
+   'PYMODULE'),
+  ('pydantic.v1.json',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\json.py',
+   'PYMODULE'),
+  ('pydantic.v1.main',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\main.py',
+   'PYMODULE'),
+  ('pydantic.v1.networks',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\networks.py',
+   'PYMODULE'),
+  ('pydantic.v1.parse',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\parse.py',
+   'PYMODULE'),
+  ('pydantic.v1.schema',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\schema.py',
+   'PYMODULE'),
+  ('pydantic.v1.tools',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\tools.py',
+   'PYMODULE'),
+  ('pydantic.v1.types',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\types.py',
+   'PYMODULE'),
+  ('pydantic.v1.typing',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\typing.py',
+   'PYMODULE'),
+  ('pydantic.v1.utils',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\utils.py',
+   'PYMODULE'),
+  ('pydantic.v1.validators',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\validators.py',
+   'PYMODULE'),
+  ('pydantic.v1.version',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\v1\\version.py',
+   'PYMODULE'),
+  ('pydantic.validate_call_decorator',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\validate_call_decorator.py',
+   'PYMODULE'),
+  ('pydantic.version',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\version.py',
+   'PYMODULE'),
+  ('pydantic.warnings',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic\\warnings.py',
+   'PYMODULE'),
+  ('pydantic_core',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic_core\\__init__.py',
+   'PYMODULE'),
+  ('pydantic_core.core_schema',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pydantic_core\\core_schema.py',
+   'PYMODULE'),
+  ('pydoc', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\pydoc.py', 'PYMODULE'),
+  ('pydoc_data',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\pydoc_data\\__init__.py',
+   'PYMODULE'),
+  ('pydoc_data.topics',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\pydoc_data\\topics.py',
+   'PYMODULE'),
+  ('pyperclip',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pyperclip\\__init__.py',
+   'PYMODULE'),
+  ('pystray',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pystray\\__init__.py',
+   'PYMODULE'),
+  ('pystray._appindicator',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pystray\\_appindicator.py',
+   'PYMODULE'),
+  ('pystray._base',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pystray\\_base.py',
+   'PYMODULE'),
+  ('pystray._darwin',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pystray\\_darwin.py',
+   'PYMODULE'),
+  ('pystray._dummy',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pystray\\_dummy.py',
+   'PYMODULE'),
+  ('pystray._gtk',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pystray\\_gtk.py',
+   'PYMODULE'),
+  ('pystray._info',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pystray\\_info.py',
+   'PYMODULE'),
+  ('pystray._util',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pystray\\_util\\__init__.py',
+   'PYMODULE'),
+  ('pystray._util.gtk',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pystray\\_util\\gtk.py',
+   'PYMODULE'),
+  ('pystray._util.notify_dbus',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pystray\\_util\\notify_dbus.py',
+   'PYMODULE'),
+  ('pystray._util.win32',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pystray\\_util\\win32.py',
+   'PYMODULE'),
+  ('pystray._win32',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pystray\\_win32.py',
+   'PYMODULE'),
+  ('pystray._xorg',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\pystray\\_xorg.py',
+   'PYMODULE'),
+  ('queue', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\queue.py', 'PYMODULE'),
+  ('quopri', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\quopri.py', 'PYMODULE'),
+  ('random', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\random.py', 'PYMODULE'),
+  ('rlcompleter',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\rlcompleter.py',
+   'PYMODULE'),
+  ('runpy', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\runpy.py', 'PYMODULE'),
+  ('secrets', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\secrets.py', 'PYMODULE'),
+  ('selectors',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\selectors.py',
+   'PYMODULE'),
+  ('setuptools',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._core_metadata',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_core_metadata.py',
+   'PYMODULE'),
+  ('setuptools._distutils',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._distutils._log',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\_log.py',
+   'PYMODULE'),
+  ('setuptools._distutils._modified',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\_modified.py',
+   'PYMODULE'),
+  ('setuptools._distutils._msvccompiler',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\_msvccompiler.py',
+   'PYMODULE'),
+  ('setuptools._distutils.archive_util',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\archive_util.py',
+   'PYMODULE'),
+  ('setuptools._distutils.ccompiler',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\ccompiler.py',
+   'PYMODULE'),
+  ('setuptools._distutils.cmd',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\cmd.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.bdist',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\bdist.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.build',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\build.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.build_ext',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\build_ext.py',
+   'PYMODULE'),
+  ('setuptools._distutils.command.sdist',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\command\\sdist.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compat',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\compat\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compat.py38',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\compat\\py38.py',
+   'PYMODULE'),
+  ('setuptools._distutils.compat.py39',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\compat\\py39.py',
+   'PYMODULE'),
+  ('setuptools._distutils.core',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\core.py',
+   'PYMODULE'),
+  ('setuptools._distutils.debug',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\debug.py',
+   'PYMODULE'),
+  ('setuptools._distutils.dir_util',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\dir_util.py',
+   'PYMODULE'),
+  ('setuptools._distutils.dist',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\dist.py',
+   'PYMODULE'),
+  ('setuptools._distutils.errors',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\errors.py',
+   'PYMODULE'),
+  ('setuptools._distutils.extension',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\extension.py',
+   'PYMODULE'),
+  ('setuptools._distutils.fancy_getopt',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\fancy_getopt.py',
+   'PYMODULE'),
+  ('setuptools._distutils.file_util',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\file_util.py',
+   'PYMODULE'),
+  ('setuptools._distutils.filelist',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\filelist.py',
+   'PYMODULE'),
+  ('setuptools._distutils.log',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\log.py',
+   'PYMODULE'),
+  ('setuptools._distutils.spawn',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\spawn.py',
+   'PYMODULE'),
+  ('setuptools._distutils.sysconfig',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\sysconfig.py',
+   'PYMODULE'),
+  ('setuptools._distutils.text_file',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\text_file.py',
+   'PYMODULE'),
+  ('setuptools._distutils.util',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\util.py',
+   'PYMODULE'),
+  ('setuptools._distutils.version',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\version.py',
+   'PYMODULE'),
+  ('setuptools._distutils.versionpredicate',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_distutils\\versionpredicate.py',
+   'PYMODULE'),
+  ('setuptools._entry_points',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_entry_points.py',
+   'PYMODULE'),
+  ('setuptools._imp',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_imp.py',
+   'PYMODULE'),
+  ('setuptools._importlib',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_importlib.py',
+   'PYMODULE'),
+  ('setuptools._itertools',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_itertools.py',
+   'PYMODULE'),
+  ('setuptools._normalization',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_normalization.py',
+   'PYMODULE'),
+  ('setuptools._path',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_path.py',
+   'PYMODULE'),
+  ('setuptools._reqs',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_reqs.py',
+   'PYMODULE'),
+  ('setuptools._shutil',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_shutil.py',
+   'PYMODULE'),
+  ('setuptools._vendor', '-', 'PYMODULE'),
+  ('setuptools._vendor.backports',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.backports.tarfile',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\tarfile\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.backports.tarfile.compat',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\tarfile\\compat\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.backports.tarfile.compat.py38',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\backports\\tarfile\\compat\\py38.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._adapters',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_adapters.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._collections',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_collections.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._compat',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_compat.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._functools',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_functools.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._itertools',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_itertools.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._meta',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_meta.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata._text',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\_text.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata.compat',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\compat\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata.compat.py311',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\compat\\py311.py',
+   'PYMODULE'),
+  ('setuptools._vendor.importlib_metadata.compat.py39',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\importlib_metadata\\compat\\py39.py',
+   'PYMODULE'),
+  ('setuptools._vendor.jaraco', '-', 'PYMODULE'),
+  ('setuptools._vendor.jaraco.context',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\context.py',
+   'PYMODULE'),
+  ('setuptools._vendor.jaraco.functools',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\functools\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.jaraco.text',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\jaraco\\text\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.more_itertools',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.more_itertools.more',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\more.py',
+   'PYMODULE'),
+  ('setuptools._vendor.more_itertools.recipes',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\more_itertools\\recipes.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._elffile',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_elffile.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._manylinux',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_manylinux.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._musllinux',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_musllinux.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._parser',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_parser.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._structures',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_structures.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging._tokenizer',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\_tokenizer.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.markers',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\markers.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.requirements',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.specifiers',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.tags',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\tags.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.utils',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\utils.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.version',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\packaging\\version.py',
+   'PYMODULE'),
+  ('setuptools._vendor.platformdirs',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\platformdirs\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.platformdirs.android',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\platformdirs\\android.py',
+   'PYMODULE'),
+  ('setuptools._vendor.platformdirs.api',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\platformdirs\\api.py',
+   'PYMODULE'),
+  ('setuptools._vendor.platformdirs.macos',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\platformdirs\\macos.py',
+   'PYMODULE'),
+  ('setuptools._vendor.platformdirs.unix',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\platformdirs\\unix.py',
+   'PYMODULE'),
+  ('setuptools._vendor.platformdirs.version',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\platformdirs\\version.py',
+   'PYMODULE'),
+  ('setuptools._vendor.platformdirs.windows',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\platformdirs\\windows.py',
+   'PYMODULE'),
+  ('setuptools._vendor.tomli',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.tomli._parser',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\_parser.py',
+   'PYMODULE'),
+  ('setuptools._vendor.tomli._re',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\_re.py',
+   'PYMODULE'),
+  ('setuptools._vendor.tomli._types',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\tomli\\_types.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel._setuptools_logging',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\_setuptools_logging.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.bdist_wheel',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\bdist_wheel.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.cli',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\cli\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.cli.convert',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\cli\\convert.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.cli.pack',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\cli\\pack.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.cli.tags',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\cli\\tags.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.cli.unpack',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\cli\\unpack.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.macosx_libfile',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\macosx_libfile.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.metadata',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\metadata.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.util',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\util.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.vendored',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.vendored.packaging',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.vendored.packaging._elffile',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\_elffile.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.vendored.packaging._manylinux',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\_manylinux.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.vendored.packaging._musllinux',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\_musllinux.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.vendored.packaging._parser',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\_parser.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.vendored.packaging._structures',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\_structures.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.vendored.packaging._tokenizer',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\_tokenizer.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.vendored.packaging.markers',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\markers.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.vendored.packaging.requirements',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.vendored.packaging.specifiers',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.vendored.packaging.tags',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\tags.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.vendored.packaging.utils',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\utils.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.vendored.packaging.version',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\vendored\\packaging\\version.py',
+   'PYMODULE'),
+  ('setuptools._vendor.wheel.wheelfile',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\wheel\\wheelfile.py',
+   'PYMODULE'),
+  ('setuptools._vendor.zipp',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.zipp.compat',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\compat\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.zipp.compat.py310',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\compat\\py310.py',
+   'PYMODULE'),
+  ('setuptools._vendor.zipp.glob',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\_vendor\\zipp\\glob.py',
+   'PYMODULE'),
+  ('setuptools.archive_util',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\archive_util.py',
+   'PYMODULE'),
+  ('setuptools.command',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\command\\__init__.py',
+   'PYMODULE'),
+  ('setuptools.command._requirestxt',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\command\\_requirestxt.py',
+   'PYMODULE'),
+  ('setuptools.command.bdist_egg',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\command\\bdist_egg.py',
+   'PYMODULE'),
+  ('setuptools.command.bdist_wheel',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\command\\bdist_wheel.py',
+   'PYMODULE'),
+  ('setuptools.command.build',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\command\\build.py',
+   'PYMODULE'),
+  ('setuptools.command.egg_info',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\command\\egg_info.py',
+   'PYMODULE'),
+  ('setuptools.command.sdist',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\command\\sdist.py',
+   'PYMODULE'),
+  ('setuptools.command.setopt',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\command\\setopt.py',
+   'PYMODULE'),
+  ('setuptools.compat',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\compat\\__init__.py',
+   'PYMODULE'),
+  ('setuptools.compat.py310',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\compat\\py310.py',
+   'PYMODULE'),
+  ('setuptools.compat.py311',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\compat\\py311.py',
+   'PYMODULE'),
+  ('setuptools.compat.py39',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\compat\\py39.py',
+   'PYMODULE'),
+  ('setuptools.config',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\config\\__init__.py',
+   'PYMODULE'),
+  ('setuptools.config._apply_pyprojecttoml',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\config\\_apply_pyprojecttoml.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\__init__.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject.error_reporting',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\error_reporting.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject.extra_validations',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\extra_validations.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject.fastjsonschema_exceptions',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\fastjsonschema_exceptions.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject.fastjsonschema_validations',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\fastjsonschema_validations.py',
+   'PYMODULE'),
+  ('setuptools.config._validate_pyproject.formats',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\config\\_validate_pyproject\\formats.py',
+   'PYMODULE'),
+  ('setuptools.config.expand',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\config\\expand.py',
+   'PYMODULE'),
+  ('setuptools.config.pyprojecttoml',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\config\\pyprojecttoml.py',
+   'PYMODULE'),
+  ('setuptools.config.setupcfg',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\config\\setupcfg.py',
+   'PYMODULE'),
+  ('setuptools.depends',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\depends.py',
+   'PYMODULE'),
+  ('setuptools.discovery',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\discovery.py',
+   'PYMODULE'),
+  ('setuptools.dist',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\dist.py',
+   'PYMODULE'),
+  ('setuptools.errors',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\errors.py',
+   'PYMODULE'),
+  ('setuptools.extension',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\extension.py',
+   'PYMODULE'),
+  ('setuptools.glob',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\glob.py',
+   'PYMODULE'),
+  ('setuptools.installer',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\installer.py',
+   'PYMODULE'),
+  ('setuptools.logging',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\logging.py',
+   'PYMODULE'),
+  ('setuptools.monkey',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\monkey.py',
+   'PYMODULE'),
+  ('setuptools.msvc',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\msvc.py',
+   'PYMODULE'),
+  ('setuptools.unicode_utils',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\unicode_utils.py',
+   'PYMODULE'),
+  ('setuptools.version',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\version.py',
+   'PYMODULE'),
+  ('setuptools.warnings',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\warnings.py',
+   'PYMODULE'),
+  ('setuptools.wheel',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\wheel.py',
+   'PYMODULE'),
+  ('setuptools.windows_support',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\setuptools\\windows_support.py',
+   'PYMODULE'),
+  ('shlex', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\shlex.py', 'PYMODULE'),
+  ('shutil', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\shutil.py', 'PYMODULE'),
+  ('signal', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\signal.py', 'PYMODULE'),
+  ('site', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\site.py', 'PYMODULE'),
+  ('six',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - 打包\\venv\\Lib\\site-packages\\six.py',
+   'PYMODULE'),
+  ('sniffio',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\sniffio\\__init__.py',
+   'PYMODULE'),
+  ('sniffio._impl',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\sniffio\\_impl.py',
+   'PYMODULE'),
+  ('sniffio._version',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\sniffio\\_version.py',
+   'PYMODULE'),
+  ('socket', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\socket.py', 'PYMODULE'),
+  ('socketserver',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\socketserver.py',
+   'PYMODULE'),
+  ('socksio',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\socksio\\__init__.py',
+   'PYMODULE'),
+  ('socksio._types',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\socksio\\_types.py',
+   'PYMODULE'),
+  ('socksio.compat',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\socksio\\compat.py',
+   'PYMODULE'),
+  ('socksio.exceptions',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\socksio\\exceptions.py',
+   'PYMODULE'),
+  ('socksio.socks4',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\socksio\\socks4.py',
+   'PYMODULE'),
+  ('socksio.socks5',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\socksio\\socks5.py',
+   'PYMODULE'),
+  ('socksio.utils',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\socksio\\utils.py',
+   'PYMODULE'),
+  ('ssl', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\ssl.py', 'PYMODULE'),
+  ('statistics',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\statistics.py',
+   'PYMODULE'),
+  ('string', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\string.py', 'PYMODULE'),
+  ('stringprep',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\stringprep.py',
+   'PYMODULE'),
+  ('subprocess',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\subprocess.py',
+   'PYMODULE'),
+  ('sysconfig',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\sysconfig.py',
+   'PYMODULE'),
+  ('tarfile', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\tarfile.py', 'PYMODULE'),
+  ('tempfile', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\tempfile.py', 'PYMODULE'),
+  ('textwrap', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\textwrap.py', 'PYMODULE'),
+  ('threading',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\threading.py',
+   'PYMODULE'),
+  ('tkinter',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\tkinter\\__init__.py',
+   'PYMODULE'),
+  ('tkinter.constants',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\tkinter\\constants.py',
+   'PYMODULE'),
+  ('tkinter.ttk',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\tkinter\\ttk.py',
+   'PYMODULE'),
+  ('token', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\token.py', 'PYMODULE'),
+  ('tokenize', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\tokenize.py', 'PYMODULE'),
+  ('tomllib',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\tomllib\\__init__.py',
+   'PYMODULE'),
+  ('tomllib._parser',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\tomllib\\_parser.py',
+   'PYMODULE'),
+  ('tomllib._re',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\tomllib\\_re.py',
+   'PYMODULE'),
+  ('tomllib._types',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\tomllib\\_types.py',
+   'PYMODULE'),
+  ('tracemalloc',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('tty', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\tty.py', 'PYMODULE'),
+  ('typing', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\typing.py', 'PYMODULE'),
+  ('typing_extensions',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - '
+   '打包\\venv\\Lib\\site-packages\\typing_extensions.py',
+   'PYMODULE'),
+  ('unittest',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\unittest\\__init__.py',
+   'PYMODULE'),
+  ('unittest._log',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\unittest\\_log.py',
+   'PYMODULE'),
+  ('unittest.async_case',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\unittest\\async_case.py',
+   'PYMODULE'),
+  ('unittest.case',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\unittest\\case.py',
+   'PYMODULE'),
+  ('unittest.loader',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\unittest\\loader.py',
+   'PYMODULE'),
+  ('unittest.main',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\unittest\\main.py',
+   'PYMODULE'),
+  ('unittest.mock',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\unittest\\mock.py',
+   'PYMODULE'),
+  ('unittest.result',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\unittest\\result.py',
+   'PYMODULE'),
+  ('unittest.runner',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\unittest\\runner.py',
+   'PYMODULE'),
+  ('unittest.signals',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\unittest\\signals.py',
+   'PYMODULE'),
+  ('unittest.suite',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\unittest\\suite.py',
+   'PYMODULE'),
+  ('unittest.util',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\unittest\\util.py',
+   'PYMODULE'),
+  ('urllib',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\urllib\\__init__.py',
+   'PYMODULE'),
+  ('urllib.error',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\urllib\\error.py',
+   'PYMODULE'),
+  ('urllib.parse',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\urllib\\parse.py',
+   'PYMODULE'),
+  ('urllib.request',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\urllib\\request.py',
+   'PYMODULE'),
+  ('urllib.response',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\urllib\\response.py',
+   'PYMODULE'),
+  ('utils',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - 打包\\utils\\__init__.py',
+   'PYMODULE'),
+  ('utils.config_manager',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - 打包\\utils\\config_manager.py',
+   'PYMODULE'),
+  ('utils.path_tools',
+   'D:\\MyFiles\\AImodels\\OCR-with-GPT - 打包\\utils\\path_tools.py',
+   'PYMODULE'),
+  ('uuid', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\uuid.py', 'PYMODULE'),
+  ('webbrowser',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\webbrowser.py',
+   'PYMODULE'),
+  ('xml', 'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\xml\\__init__.py', 'PYMODULE'),
+  ('xml.etree',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\xml\\etree\\__init__.py',
+   'PYMODULE'),
+  ('xml.etree.ElementInclude',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\xml\\etree\\ElementInclude.py',
+   'PYMODULE'),
+  ('xml.etree.ElementPath',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\xml\\etree\\ElementPath.py',
+   'PYMODULE'),
+  ('xml.etree.ElementTree',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\xml\\etree\\ElementTree.py',
+   'PYMODULE'),
+  ('xml.etree.cElementTree',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\xml\\etree\\cElementTree.py',
+   'PYMODULE'),
+  ('xml.parsers',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\xml\\parsers\\__init__.py',
+   'PYMODULE'),
+  ('xml.parsers.expat',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\xml\\parsers\\expat.py',
+   'PYMODULE'),
+  ('xml.sax',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\xml\\sax\\__init__.py',
+   'PYMODULE'),
+  ('xml.sax._exceptions',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\xml\\sax\\_exceptions.py',
+   'PYMODULE'),
+  ('xml.sax.expatreader',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\xml\\sax\\expatreader.py',
+   'PYMODULE'),
+  ('xml.sax.handler',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\xml\\sax\\handler.py',
+   'PYMODULE'),
+  ('xml.sax.saxutils',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\xml\\sax\\saxutils.py',
+   'PYMODULE'),
+  ('xml.sax.xmlreader',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\xml\\sax\\xmlreader.py',
+   'PYMODULE'),
+  ('xmlrpc',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\xmlrpc\\__init__.py',
+   'PYMODULE'),
+  ('xmlrpc.client',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\xmlrpc\\client.py',
+   'PYMODULE'),
+  ('zipfile',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\zipfile\\__init__.py',
+   'PYMODULE'),
+  ('zipfile._path',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\zipfile\\_path\\__init__.py',
+   'PYMODULE'),
+  ('zipfile._path.glob',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\zipfile\\_path\\glob.py',
+   'PYMODULE'),
+  ('zipimport',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\zipimport.py',
+   'PYMODULE'),
+  ('zoneinfo',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\zoneinfo\\__init__.py',
+   'PYMODULE'),
+  ('zoneinfo._common',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\zoneinfo\\_common.py',
+   'PYMODULE'),
+  ('zoneinfo._tzpath',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\zoneinfo\\_tzpath.py',
+   'PYMODULE'),
+  ('zoneinfo._zoneinfo',
+   'C:\\Users\\zhouzhiwu\\anaconda3\\Lib\\zoneinfo\\_zoneinfo.py',
+   'PYMODULE')])
