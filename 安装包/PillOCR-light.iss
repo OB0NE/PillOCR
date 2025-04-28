@@ -4,7 +4,7 @@
 #define MyAppName "PillOCR-Light"
 #define MyAppVersion "0.0.1"
 #define MyAppPublisher "ZhouZhiwu"
-#define MyAppExeName "GPTOCR.exe"
+#define MyAppExeName "PillOCR.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -28,7 +28,7 @@ DisableProgramGroupPage=yes
 ;PrivilegesRequired=lowest
 PrivilegesRequiredOverridesAllowed=dialog
 OutputDir=D:\MyFiles\AImodels\OCR-with-GPT - 打包\安装包
-OutputBaseFilename=mysetup
+OutputBaseFilename=PillOCR-setup
 SetupIconFile=D:\MyFiles\AImodels\OCR-with-GPT - 打包\ocrgui.ico
 Compression=lzma
 SolidCompression=yes

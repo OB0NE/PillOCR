@@ -2,6 +2,7 @@ import os
 import re
 import pystray
 import pyperclip
+import keyboard
 import threading
 import tkinter as tk
 from tkinter import ttk
@@ -46,7 +47,7 @@ class ImageToMarkdown:
                     )
                 else:
                     self.client = OpenAI()
-            elif self.current_provider == '豆包':
+            elif self.current_provider == '火山引擎':
                 if proxy:
                     self.client = OpenAI(
                         api_key=os.environ.get("ARK_API_KEY"),
@@ -59,20 +60,6 @@ class ImageToMarkdown:
                     self.client = OpenAI(
                         api_key=os.environ.get("ARK_API_KEY"),
                         base_url="https://ark.cn-beijing.volces.com/api/v3"
-                    )
-            elif self.current_provider == 'deepseek':
-                if proxy:
-                    self.client = OpenAI(
-                        api_key=os.environ.get("ARK_API_KEY"),
-                        base_url="https://api.deepseek.com",
-                        http_client=httpx.Client(
-                            transport=httpx.HTTPTransport(proxy=proxy)
-                        )
-                    )
-                else:
-                    self.client = OpenAI(
-                        api_key=os.environ.get("ARK_API_KEY"),
-                        base_url="https://api.deepseek.com"
                     )
         except Exception as e:
             if self.log_callback:
@@ -188,7 +175,7 @@ class App:
                 'proxy': '',
                 'model': 'gpt-4o'
             },
-            '豆包': {
+            '火山引擎': {
                 'api_key': '',
                 'proxy': '',
                 'model': ''
@@ -212,8 +199,7 @@ class App:
             # 添加服务商映射
         self.PROVIDER_MAPPING = {
             'OPENAI': 'OPENAI',
-            '豆包': '豆包',
-            'deepseek': 'deepseek'# 修改映射关系
+            '火山引擎': '火山引擎'
         }
             # 反向映射用于保存
         self.PROVIDER_REVERSE_MAPPING = {v: k for k, v in self.PROVIDER_MAPPING.items()}
@@ -274,6 +260,19 @@ class App:
                                    values=['$$ $$', '\\[ \\]'])
         block_combo.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(10, 0))
 
+        # 热键设置
+        self.hotkey_var = tk.StringVar(value='ctrl+shift+o')  # 默认热键
+        hotkey_frame = ttk.LabelFrame(left_frame, text="快捷键设置", padding=10, style='TLabelframe')
+        hotkey_frame.pack(fill=tk.X, pady=(0, 10))
+
+        hotkey_input_frame = ttk.Frame(hotkey_frame, style='TFrame')
+        hotkey_input_frame.pack(fill=tk.X, pady=(0, 5))
+        ttk.Label(hotkey_input_frame, text="启动/停止快捷键:").pack(side=tk.LEFT)
+        self.hotkey_entry = ttk.Entry(hotkey_input_frame, textvariable=self.hotkey_var)
+        self.hotkey_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(10, 10))
+        save_hotkey_button = ttk.Button(hotkey_input_frame, text="保存", command=self.save_hotkey)
+        save_hotkey_button.pack(side=tk.RIGHT)
+
         # 右侧日志显示
         log_frame = ttk.LabelFrame(right_frame, text="日志", padding=10, style='TLabelframe')
         log_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
@@ -311,12 +310,9 @@ class App:
         if self.provider_var.get() == 'OPENAI':
             self.model_frame.pack_forget()
             self.model_frame.pack(after=self.provider_frame, fill=tk.X, pady=(0, 10))
-        elif self.provider_var.get() == '豆包':
+        elif self.provider_var.get() == '火山引擎':
             self.model_frame.pack_forget()
             self.endpoint_frame.pack(after=self.provider_frame, fill=tk.X, pady=(0, 10))
-        elif self.provider_var.get() == 'deepseek':
-            self.model_frame.pack_forget()
-            self.model_frame.pack(after=self.provider_frame, fill=tk.X, pady=(0, 10))
 
     def auto_start(self):
         self.start_processing()
@@ -334,6 +330,33 @@ class App:
         self.processor.set_wrappers(inline_wrapper, block_wrapper)
         self.save_settings()  # 自动保存配置
         self.log(f"已更新并保存LaTeX包装符设置")
+
+    def save_hotkey(self):
+        """保存快捷键设置"""
+        try:
+            # 先取消旧快捷键
+            self.unregister_hotkey()
+            # 保存新快捷键并注册
+            self.register_hotkey()
+            self.save_settings()
+            self.log(f"启动/停止快捷键已设置为: {self.hotkey_var.get()}")
+        except Exception as e:
+            self.log(f"快捷键设置失败: {e}")
+
+    def register_hotkey(self):
+        """注册全局热键"""
+        try:
+            keyboard.add_hotkey(self.hotkey_var.get(), self.toggle_processing)
+            self.log(f"已注册快捷键: {self.hotkey_var.get()}")
+        except Exception as e:
+            self.log(f"注册快捷键失败: {e}")
+
+    def unregister_hotkey(self):
+        """取消注册热键"""
+        try:
+            keyboard.remove_hotkey(self.hotkey_var.get())
+        except:
+            pass  # 忽略可能的错误，如热键尚未注册
 
     def start_processing(self):
         self.processor.start()
@@ -424,6 +447,7 @@ class App:
         self.root.deiconify()
 
     def quit_app(self):
+        self.unregister_hotkey()  # 取消热键注册
         self.processor.stop()
         if self.icon:
             self.icon.stop()
@@ -450,10 +474,8 @@ class App:
         # 更新模型
         if current_provider == 'OPENAI':
             self.processor.set_gpt_model(settings.get('model', 'gpt-4o'))
-        elif current_provider == '豆包':
+        elif current_provider == '火山引擎':
             self.processor.set_gpt_model(settings.get('model', ''))
-        elif current_provider == 'deepseek':
-            self.processor.set_gpt_model(settings.get('model', 'deepseek-chat'))
 
     def apply_provider_settings(self):
         """处理和切换服务商相关的 UI 界面更新和组件显示"""
@@ -462,10 +484,8 @@ class App:
         
         if (current_provider == 'OPENAI'):
             self.processor.set_provider('OPENAI')
-        elif (current_provider == '豆包'):
-            self.processor.set_provider('豆包')
-        elif (current_provider == 'deepseek'):
-            self.processor.set_provider('deepseek')
+        elif (current_provider == '火山引擎'):
+            self.processor.set_provider('火山引擎')
         
         if current_provider == 'OPENAI':
             # OpenAI 特定设置
@@ -475,22 +495,14 @@ class App:
             # UI更新
             self.endpoint_frame.pack_forget()
             self.model_frame.pack(after=self.provider_frame, fill=tk.X, pady=(0, 10))
-        elif current_provider == '豆包':
-            # 豆包特定设置
+        elif current_provider == '火山引擎':
+            # 火山引擎特定设置
             self.api_key_var.set(settings.get('api_key', ''))
             self.proxy_var.set(settings.get('proxy', ''))
             self.model_var.set(settings.get('model', ''))
             # UI更新
             self.model_frame.pack_forget()
             self.endpoint_frame.pack(after=self.provider_frame, fill=tk.X, pady=(0, 10))
-        elif current_provider == 'deepseek':
-            # deepseek特定设置
-            self.api_key_var.set(settings.get('api_key', ''))
-            self.proxy_var.set(settings.get('proxy', ''))
-            self.model_var.set(settings.get('model', 'deepseek-chat'))
-            # UI更新
-            self.endpoint_frame.pack_forget()
-            self.model_frame.pack(after=self.provider_frame, fill=tk.X, pady=(0, 10))
         
         # 确保在应用设置时更新客户端
         self.update_client_settings()
@@ -506,13 +518,7 @@ class App:
                 'proxy': self.proxy_var.get().strip(),
                 'model': self.model_var.get().strip()
             }
-        elif current_provider == '豆包':
-            settings = {
-                'api_key': self.api_key_var.get().strip(),
-                'proxy': self.proxy_var.get().strip(),
-                'model': self.model_var.get().strip()
-            }
-        elif current_provider == 'deepseek':
+        elif current_provider == '火山引擎':
             settings = {
                 'api_key': self.api_key_var.get().strip(),
                 'proxy': self.proxy_var.get().strip(),
@@ -528,7 +534,8 @@ class App:
             'latex_settings': {
                 'inline_wrapper': self.inline_var.get(),
                 'block_wrapper': self.block_var.get()
-            }
+            },
+            'hotkey': self.hotkey_var.get()
         }
         
         try:
@@ -545,8 +552,6 @@ class App:
         # 根据供应商设置不同的模型
         if display_provider == 'OPENAI':
             self.model_dropdown['values'] = ['gpt-4o', 'gpt-4o-mini']
-        elif display_provider == 'deepseek':
-            self.model_dropdown['values'] = ['deepseek-chat', 'deepseek-reasoner']
         else:
             self.model_dropdown['values'] = []
 
@@ -583,13 +588,12 @@ class App:
             if 'provider_settings' not in config:
                 self.provider_settings = {
                     'OPENAI': {'api_key': '', 'proxy': '', 'model': 'gpt-4o'},
-                    '豆包': {'api_key': '', 'proxy': '', 'model': ''},
-                    'deepseek':{'api_key': '', 'proxy': '', 'model': 'deepseek-chat'}
+                    '火山引擎': {'api_key': '', 'proxy': '', 'model': ''}
                 }
             else:
                 self.provider_settings = config['provider_settings']
-            current_provider = config.get('current_provider', 'OPENAI')
-            self.provider_var.set(current_provider)
+                current_provider = config.get('current_provider', 'OPENAI')
+                self.provider_var.set(current_provider)
             
             # 加载LaTeX包装符设置
             latex_settings = config.get('latex_settings', {
@@ -598,16 +602,25 @@ class App:
             })
             self.inline_var.set(latex_settings['inline_wrapper'])
             self.block_var.set(latex_settings['block_wrapper'])
+
+            # 将包装符应用到处理器
+            self.processor.set_wrappers(
+                self.inline_var.get(), 
+                self.block_var.get()
+            )
             
+            # 加载热键设置
+            self.hotkey_var.set(config.get('hotkey', 'ctrl+shift+o'))
+            self.register_hotkey()  # 注册热键
+
             # 更新所有设置
             self.apply_provider_settings()
-            # self.update_wrappers()  # 确保更新包装符
         except Exception as e:
             self.log(f"加载配置失败: {e}")
 
 if __name__ == "__main__":
     root = tk.Tk()
-    root.geometry("800x540")  # 调整窗口大小以适应新布局
+    root.geometry("800x620")  # 调整窗口大小以适应新布局
     # 在创建窗口后立即隐藏
     root.withdraw()
     processor = ImageToMarkdown(None, None)

@@ -2,11 +2,10 @@ block_cipher = None
 
 a = Analysis(
     ['GPTOCRGUI.py'],
-    pathex=['D:/MyFiles/AImodels/OCR-with-GPT - 打包'],  # 添加项目路径
+    pathex=['D:/MyFiles/AImodels/OCR-with-GPT - 打包'],  
     binaries=[],
     datas=[
         ('ocrgui.ico', '.'),
-        ('config.json', '.'),
         ('utils/*.py', 'utils'),
         ('processors/*.py', 'processors'),
     ],
@@ -18,7 +17,8 @@ a = Analysis(
         'utils.path_tools',
         'utils.config_manager',
         'processors.image_encoder',
-        'processors.markdown_processor'
+        'processors.markdown_processor',
+        'keyboard'
     ],
     hookspath=[],
     hooksconfig={},
@@ -39,7 +39,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='GPTOCR',
+    name='PillOCR',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
