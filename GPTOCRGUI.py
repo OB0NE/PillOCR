@@ -337,8 +337,13 @@ class App:
         self.load_settings()
 
         # 绑定包装符变化
-        self.inline_var.trace_add('write', self.update_wrappers)
-        self.block_var.trace_add('write', self.update_wrappers)
+            # 添加防抖计时器
+        self.debounce_timer = None
+        self.last_wrapper_change = time.time()
+
+        self.inline_var.trace_add('write', self.debounced_update_wrappers)
+        self.block_var.trace_add('write', self.debounced_update_wrappers)
+
         self.processor.set_gpt_model(self.model_var.get())  # 确保在加载配置后更新模型设置
 
         # 自动开始处理
@@ -354,6 +359,18 @@ class App:
         elif self.provider_var.get() == '自定义':
             self.model_frame.pack_forget()
 
+    def debounced_update_wrappers(self, *args):
+        """防抖包装符更新"""
+        DEBOUNCE_TIME = 2.0  # 1秒防抖时间
+        
+        # 取消之前的定时器
+        if self.debounce_timer:
+            self.debounce_timer.cancel()
+            
+        # 创建新定时器
+        self.debounce_timer = threading.Timer(DEBOUNCE_TIME, self.update_wrappers)
+        self.debounce_timer.start()
+
     def auto_start(self):
         self.start_processing()
         self.running_state = True
@@ -363,7 +380,7 @@ class App:
         self.log_text.insert(tk.END, message + "\n")
         self.log_text.see(tk.END)
 
-    def update_wrappers(self, *args):
+    def update_wrappers(self):
         """更新包装符并保存配置"""
         inline_wrapper = self.inline_var.get()
         block_wrapper = self.block_var.get()
