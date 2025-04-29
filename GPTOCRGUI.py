@@ -50,7 +50,6 @@ class ImageToMarkdown:
             elif self.current_provider == '火山引擎':
                 if proxy:
                     self.client = OpenAI(
-                        api_key=os.environ.get("ARK_API_KEY"),
                         base_url="https://ark.cn-beijing.volces.com/api/v3",
                         http_client=httpx.Client(
                             transport=httpx.HTTPTransport(proxy=proxy)
@@ -58,8 +57,24 @@ class ImageToMarkdown:
                     )
                 else:
                     self.client = OpenAI(
-                        api_key=os.environ.get("ARK_API_KEY"),
                         base_url="https://ark.cn-beijing.volces.com/api/v3"
+                    )
+            elif self.current_provider == '自定义':
+                # 从app获取用户设置的URL
+                custom_url = self.app.url_var.get().strip()
+                if not custom_url:
+                    raise ValueError("自定义URL不能为空")
+                    
+                if proxy:
+                    self.client = OpenAI(
+                        base_url=custom_url,
+                        http_client=httpx.Client(
+                            transport=httpx.HTTPTransport(proxy=proxy)
+                        )
+                    )
+                else:
+                    self.client = OpenAI(
+                        base_url=custom_url
                     )
         except Exception as e:
             if self.log_callback:
@@ -106,7 +121,7 @@ class ImageToMarkdown:
 
                     markdown_content = self.process_image(image)
                     pyperclip.copy(markdown_content)
-                    self.log_callback("Markdown 内容已复制到剪贴板。")
+                    self.log_callback("识别后的内容已复制到剪贴板。")
 
                     self.app.update_icon_status('success')
                     last_image = image
@@ -131,13 +146,16 @@ class ImageToMarkdown:
 class App:
     def __init__(self, root, processor):
         self.processor = processor
+        self.processor.app = self
+        self.processor.log_callback = self.log
         self.config_manager = ConfigManager()
         self.provider_var = tk.StringVar(value='OPENAI')  # 确保 provider_var 在 load_settings 之前定义
+        self.url_var = tk.StringVar(value='')
         self.log_text = tk.Text()  # 确保 log_text 在 load_settings 之前定义
         self.root = root
         self.root.title("OCR")
         self.root.configure(bg='#ffffff')
-
+        
         # 配置 ttk 样式
         style = ttk.Style()
         style.theme_use('clam')
@@ -179,6 +197,12 @@ class App:
                 'api_key': '',
                 'proxy': '',
                 'model': ''
+            },
+            '自定义': {
+                'url':'',
+                'api_key': '',
+                'proxy': '',
+                'model': ''
             }
         }
 
@@ -199,7 +223,8 @@ class App:
             # 添加服务商映射
         self.PROVIDER_MAPPING = {
             'OPENAI': 'OPENAI',
-            '火山引擎': '火山引擎'
+            '火山引擎': '火山引擎',
+            '自定义': '自定义'
         }
             # 反向映射用于保存
         self.PROVIDER_REVERSE_MAPPING = {v: k for k, v in self.PROVIDER_MAPPING.items()}
@@ -209,6 +234,12 @@ class App:
                                             state='readonly')
         self.provider_dropdown.pack(fill=tk.X)
         self.provider_dropdown.bind('<<ComboboxSelected>>', self.on_provider_change)
+
+        # 自定义 URL 配置，先隐藏，只有选择自定义才显示
+        self.custom_url_frame = ttk.LabelFrame(left_frame, text="Base_Url", padding=10, style='TLabelframe')
+        self.url_entry = ttk.Entry(self.custom_url_frame, textvariable=self.url_var)
+        self.url_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=10)
+        ttk.Button(self.custom_url_frame, text="保存", command=self.save_custom_url).pack(side=tk.RIGHT)
         
         # API Key 设置
         api_frame = ttk.LabelFrame(left_frame, text="API Key", padding=10, style='TLabelframe')
@@ -230,14 +261,21 @@ class App:
         ttk.Button(proxy_frame, text="保存", command=self.save_proxy).pack(side=tk.RIGHT)
 
         # 模型选择
-        self.model_frame = ttk.LabelFrame(left_frame, text="模型选择", padding=10, style='TLabelframe')
+        self.model_frame = ttk.LabelFrame(left_frame, text="模型选择（请确保模型具有视觉功能）", padding=10, style='TLabelframe')
         self.model_dropdown = ttk.Combobox(self.model_frame, textvariable=self.model_var,
                                            state='readonly')
+        ttk.Button(self.model_frame, text="保存", command=self.save_model_choice).pack(side=tk.RIGHT)
         self.model_dropdown.pack(fill=tk.X)
         self.model_dropdown.bind('<<ComboboxSelected>>', self.save_model_choice)
 
+        # 模型输入框
+        self.model_entry_frame= ttk.LabelFrame(left_frame, text="模型（请确保模型具有视觉功能）", padding=10, style='TLabelframe')
+        self.model_entry=ttk.Entry(self.model_entry_frame, textvariable=self.model_var)
+        self.model_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 10))
+        ttk.Button(self.model_entry_frame, text="保存", command=self.save_model_choice).pack(side=tk.RIGHT)
+
         # 推理接入点框架
-        self.endpoint_frame = ttk.LabelFrame(left_frame, text="推理接入点", padding=10, style='TLabelframe')
+        self.endpoint_frame = ttk.LabelFrame(left_frame, text="推理接入点（请确保模型具有视觉功能）", padding=10, style='TLabelframe')
         self.endpoint_entry = ttk.Entry(self.endpoint_frame, textvariable=self.model_var)
         self.endpoint_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 10))
         ttk.Button(self.endpoint_frame, text="保存", command=self.save_model_choice).pack(side=tk.RIGHT)
@@ -305,7 +343,7 @@ class App:
 
         # 自动开始处理
         self.root.after(1000, self.auto_start)
-
+        #self.update_client_settings()
         # 初始隐藏推理接入点
         if self.provider_var.get() == 'OPENAI':
             self.model_frame.pack_forget()
@@ -313,6 +351,8 @@ class App:
         elif self.provider_var.get() == '火山引擎':
             self.model_frame.pack_forget()
             self.endpoint_frame.pack(after=self.provider_frame, fill=tk.X, pady=(0, 10))
+        elif self.provider_var.get() == '自定义':
+            self.model_frame.pack_forget()
 
     def auto_start(self):
         self.start_processing()
@@ -476,6 +516,8 @@ class App:
             self.processor.set_gpt_model(settings.get('model', 'gpt-4o'))
         elif current_provider == '火山引擎':
             self.processor.set_gpt_model(settings.get('model', ''))
+        elif current_provider == '自定义':
+            self.processor.set_gpt_model(settings.get('model', ''))
 
     def apply_provider_settings(self):
         """处理和切换服务商相关的 UI 界面更新和组件显示"""
@@ -486,6 +528,8 @@ class App:
             self.processor.set_provider('OPENAI')
         elif (current_provider == '火山引擎'):
             self.processor.set_provider('火山引擎')
+        elif current_provider == '自定义':
+            self.processor.set_provider('自定义')
         
         if current_provider == 'OPENAI':
             # OpenAI 特定设置
@@ -493,6 +537,7 @@ class App:
             self.proxy_var.set(settings.get('proxy', ''))
             self.model_var.set(settings.get('model', 'gpt-4o'))
             # UI更新
+            self.model_entry_frame.pack_forget()
             self.endpoint_frame.pack_forget()
             self.model_frame.pack(after=self.provider_frame, fill=tk.X, pady=(0, 10))
         elif current_provider == '火山引擎':
@@ -502,7 +547,19 @@ class App:
             self.model_var.set(settings.get('model', ''))
             # UI更新
             self.model_frame.pack_forget()
+            self.model_entry_frame.pack_forget()
             self.endpoint_frame.pack(after=self.provider_frame, fill=tk.X, pady=(0, 10))
+        elif current_provider == '自定义':
+            # 读取自定义URL, 如果需要可以在 self.provider_settings['自定义'] 中添加 url
+            self.url_var.set(settings.get('url', ''))
+            self.api_key_var.set(settings.get('api_key', ''))
+            self.proxy_var.set(settings.get('proxy', ''))
+            self.model_var.set(settings.get('model', ''))
+            # 自定义场景下可根据需求显示/隐藏 UI
+            self.model_frame.pack_forget()
+            self.endpoint_frame.pack_forget()
+            self.custom_url_frame.pack(after=self.provider_frame, fill=tk.X, pady=(0, 10))
+            self.model_entry_frame.pack(after=self.custom_url_frame, fill=tk.X, pady=(0, 10))
         
         # 确保在应用设置时更新客户端
         self.update_client_settings()
@@ -520,6 +577,14 @@ class App:
             }
         elif current_provider == '火山引擎':
             settings = {
+                'api_key': self.api_key_var.get().strip(),
+                'proxy': self.proxy_var.get().strip(),
+                'model': self.model_var.get().strip()
+            }
+        elif current_provider == '自定义':
+            # 保存自定义URL
+            settings = {
+                'url': self.url_var.get().strip(),
                 'api_key': self.api_key_var.get().strip(),
                 'proxy': self.proxy_var.get().strip(),
                 'model': self.model_var.get().strip()
@@ -559,9 +624,21 @@ class App:
         if self.model_dropdown['values']:
             self.model_var.set(self.model_dropdown['values'][0])
 
+        # 显示/隐藏自定义 URL 框
+        if display_provider == '自定义':
+            # 在 provider_frame 下方插入
+            self.custom_url_frame.pack(after=self.provider_frame, fill=tk.X, pady=(0, 10))
+        else:
+            self.custom_url_frame.pack_forget()
+
         # 加载新服务商配置
         self.apply_provider_settings()
         self.log(f"已切换到 {display_provider} 服务")
+
+    def save_custom_url(self):
+        """保存自定义URL并更新设置"""
+        self.save_settings()
+        self.log(f"已保存自定义URL: {self.url_var.get()}")
 
     def save_api_key(self):
         """保存 API Key"""
@@ -588,7 +665,8 @@ class App:
             if 'provider_settings' not in config:
                 self.provider_settings = {
                     'OPENAI': {'api_key': '', 'proxy': '', 'model': 'gpt-4o'},
-                    '火山引擎': {'api_key': '', 'proxy': '', 'model': ''}
+                    '火山引擎': {'api_key': '', 'proxy': '', 'model': ''},
+                    '自定义': {'url': '', 'api_key': '', 'proxy': '', 'model': ''}
                 }
             else:
                 self.provider_settings = config['provider_settings']
@@ -620,7 +698,7 @@ class App:
 
 if __name__ == "__main__":
     root = tk.Tk()
-    root.geometry("800x620")  # 调整窗口大小以适应新布局
+    root.geometry("800x700")  # 调整窗口大小以适应新布局
     # 在创建窗口后立即隐藏
     root.withdraw()
     processor = ImageToMarkdown(None, None)
