@@ -1,0 +1,20 @@
+# PyInstaller 默认生成目录
+/build/
+/dist/
+
+# 二进制文件
+*.exe
+*.dmg
+*.app
+
+# 平台临时文件（按需补充）
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# Python 编译缓存
+__pycache__/
+*.py[cod]
+
+# IDE 配置文件（示例）
+.idea/
+.vscode/
