@@ -4,8 +4,12 @@ import os
 class ConfigManager:
     def __init__(self, config_file='config.json'):
         # Get %APPDATA% directory and create app configuration directory
-        appdata = os.getenv("APPDATA")
-        config_dir = os.path.join(appdata, "PillOCR")
+        if platform.system() == "Windows":
+            appdata = os.getenv("APPDATA")
+            config_dir = os.path.join(appdata, "PillOCR")
+        elif platform.system() == "Darwin":
+            home = os.path.expanduser("~")
+            config_dir = os.path.join(home, "Library", "Application Support", "PillOCR")
         if not os.path.exists(config_dir):
             os.makedirs(config_dir, exist_ok=True)
         self.config_file = os.path.join(config_dir, config_file)
