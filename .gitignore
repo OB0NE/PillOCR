@@ -6,7 +6,7 @@
 *.exe
 *.dmg
 *.app
-
+GPTOCRGUI-deepseek.py
 # 平台临时文件（按需补充）
 .DS_Store  # macOS
 Thumbs.db  # Windows
