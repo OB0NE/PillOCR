@@ -2,6 +2,7 @@
 /build/
 /dist/
 /安装包/
+# python vnev
 /venv/
 # 二进制文件
 *.exe
@@ -13,7 +14,7 @@ GPTOCRGUI-deepseek.py
 Thumbs.db  # Windows
 
 # Python 编译缓存
-__pycache__/
+**/__pycache__/
 *.py[cod]
 
 # IDE 配置文件（示例）

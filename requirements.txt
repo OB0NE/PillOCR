@@ -2,3 +2,4 @@ openai
 pystray
 pyperclip
 httpx[socks]
+keyboard
