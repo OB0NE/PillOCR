@@ -1,6 +1,7 @@
 # PyInstaller 默认生成目录
 /build/
 /dist/
+/安装包/
 
 # 二进制文件
 *.exe
