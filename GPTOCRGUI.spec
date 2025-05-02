@@ -64,5 +64,12 @@ if platform.system() == "Darwin":
         exe,
         name='PillOCR.app',
         icon=icon_file,
-        bundle_identifier='com.pebblestudio.pillocr'
+        bundle_identifier='com.pebblestudio.pillocr',
+        info_plist={
+            'LSUIElement': 'YES',
+            'CFBundleShortVersionString': '0.0.1',
+            'CFBundleName': 'PillOCR',
+            'CFBundleDisplayName': 'PillOCR',
+            'NSHighResolutionCapable': True,
+        }
     )
