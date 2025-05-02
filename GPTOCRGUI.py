@@ -307,6 +307,8 @@ class App:
         hotkey_input_frame.pack(fill=tk.X, pady=(0, 5))
         ttk.Label(hotkey_input_frame, text="启动/停止快捷键:").pack(side=tk.LEFT)
         self.hotkey_entry = ttk.Entry(hotkey_input_frame, textvariable=self.hotkey_var)
+        self.hotkey_entry.bind('<Key>', self.capture_hotkey)
+        self.hotkey_entry.bind('<FocusOut>', self.finalize_hotkey)
         self.hotkey_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(10, 10))
         save_hotkey_button = ttk.Button(hotkey_input_frame, text="保存", command=self.save_hotkey)
         save_hotkey_button.pack(side=tk.RIGHT)
@@ -414,6 +416,23 @@ class App:
             keyboard.remove_hotkey(self.hotkey_var.get())
         except:
             pass  # 忽略可能的错误，如热键尚未注册
+    
+    def capture_hotkey(self, event):
+        """实时捕获按键组合"""
+        modifiers = []
+        if event.state & 0x0001: modifiers.append('shift')
+        if event.state & 0x0004: modifiers.append('ctrl')
+        if event.state & 0x0008: modifiers.append('alt')
+        
+        key = event.keysym.lower()
+        if key not in modifiers:
+            combo = '+'.join(modifiers + [key]) if modifiers else key
+            self.hotkey_var.set(combo)
+        return "break"  # 阻止默认输入
+
+    def finalize_hotkey(self, event):
+        """失去焦点时保存热键"""
+        self.save_hotkey()
 
     def start_processing(self):
         self.processor.start()
