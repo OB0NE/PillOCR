@@ -1,11 +1,17 @@
+import platform
+
 block_cipher = None
 
+icon_file = 'ocrgui.ico' # 默认 Windows 图标
+if platform.system() == "Darwin": # 如果是 macOS
+    icon_file = 'ocrgui.icns' # 设置 macOS 图标 
+
 a = Analysis(
-    ['GPTOCRGUI.py'],
-    pathex=['D:/MyFiles/AImodels/OCR-with-GPT - 打包'],  
+    ['GPTOCRGUI.py'], 
     binaries=[],
     datas=[
         ('ocrgui.ico', '.'),
+        ('ocrgui.icns', '.'),
         ('utils/*.py', 'utils'),
         ('processors/*.py', 'processors'),
     ],
@@ -38,7 +44,6 @@ exe = EXE(
     a.binaries,
     a.zipfiles,
     a.datas,
-    [],
     name='PillOCR',
     debug=False,
     bootloader_ignore_signals=False,
@@ -51,5 +56,13 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon='ocrgui.ico'
+    icon=icon_file if platform.system() == "Windows" else None
 )
+
+if platform.system() == "Darwin":
+    app = BUNDLE(
+        exe,
+        name='PillOCR.app',
+        icon=icon_file,
+        bundle_identifier='com.pebblestudio.pillocr'
+    )
