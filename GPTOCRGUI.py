@@ -2,7 +2,7 @@ import os
 import re
 import pystray
 import pyperclip
-import keyboard
+#import keyboard
 import threading
 import tkinter as tk
 from tkinter import ttk
@@ -14,6 +14,7 @@ from utils.path_tools import get_absolute_path
 from processors.image_encoder import ImageEncoder
 from processors.markdown_processor import MarkdownProcessor
 from utils.config_manager import ConfigManager
+from utils.hotkey_manager import create_hotkey_manager, HotkeyManager
 
 class ImageToMarkdown:
     def __init__(self, log_callback, app):
@@ -149,6 +150,8 @@ class App:
         self.processor.app = self
         self.processor.log_callback = self.log
         self.config_manager = ConfigManager()
+        self.hotkey_manager = create_hotkey_manager(self.toggle_processing)
+        self.hotkey_var = tk.StringVar(value='ctrl+shift+o')
         self.provider_var = tk.StringVar(value='OPENAI')  # 确保 provider_var 在 load_settings 之前定义
         self.url_var = tk.StringVar(value='')
         self.log_text = tk.Text()  # 确保 log_text 在 load_settings 之前定义
@@ -298,20 +301,20 @@ class App:
                                    values=['$$ $$', '\\[ \\]'])
         block_combo.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(10, 0))
 
-        # 热键设置
-        self.hotkey_var = tk.StringVar(value='ctrl+shift+o')  # 默认热键
-        hotkey_frame = ttk.LabelFrame(left_frame, text="快捷键设置", padding=10, style='TLabelframe')
-        hotkey_frame.pack(fill=tk.X, pady=(0, 10))
+        # 根据平台决定是否显示热键设置UI
+        if HotkeyManager.should_show_ui():
+            hotkey_frame = ttk.LabelFrame(left_frame, text="快捷键设置", padding=10, style='TLabelframe')
+            hotkey_frame.pack(fill=tk.X, pady=(0, 10))
 
-        hotkey_input_frame = ttk.Frame(hotkey_frame, style='TFrame')
-        hotkey_input_frame.pack(fill=tk.X, pady=(0, 5))
-        ttk.Label(hotkey_input_frame, text="启动/停止快捷键:").pack(side=tk.LEFT)
-        self.hotkey_entry = ttk.Entry(hotkey_input_frame, textvariable=self.hotkey_var)
-        self.hotkey_entry.bind('<Key>', self.capture_hotkey)
-        self.hotkey_entry.bind('<FocusOut>', self.finalize_hotkey)
-        self.hotkey_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(10, 10))
-        save_hotkey_button = ttk.Button(hotkey_input_frame, text="保存", command=self.save_hotkey)
-        save_hotkey_button.pack(side=tk.RIGHT)
+            hotkey_input_frame = ttk.Frame(hotkey_frame, style='TFrame')
+            hotkey_input_frame.pack(fill=tk.X, pady=(0, 5))
+            ttk.Label(hotkey_input_frame, text="启动/停止快捷键:").pack(side=tk.LEFT)
+            self.hotkey_entry = ttk.Entry(hotkey_input_frame, textvariable=self.hotkey_var)
+            self.hotkey_entry.bind('<Key>', self.capture_hotkey)
+            self.hotkey_entry.bind('<FocusOut>', self.finalize_hotkey)
+            self.hotkey_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(10, 10))
+            save_hotkey_button = ttk.Button(hotkey_input_frame, text="保存", command=self.save_hotkey)
+            save_hotkey_button.pack(side=tk.RIGHT)
 
         # 右侧日志显示
         log_frame = ttk.LabelFrame(right_frame, text="日志", padding=10, style='TLabelframe')
@@ -392,10 +395,11 @@ class App:
 
     def save_hotkey(self):
         """保存快捷键设置"""
+        if not HotkeyManager.is_supported():
+            return
+            
         try:
-            # 先取消旧快捷键
             self.unregister_hotkey()
-            # 保存新快捷键并注册
             self.register_hotkey()
             self.save_settings()
             self.log(f"启动/停止快捷键已设置为: {self.hotkey_var.get()}")
@@ -404,18 +408,26 @@ class App:
 
     def register_hotkey(self):
         """注册全局热键"""
+        if not HotkeyManager.is_supported():
+            return  # 在不支持的平台上什么也不做
+            
         try:
-            keyboard.add_hotkey(self.hotkey_var.get(), self.toggle_processing)
-            self.log(f"已注册快捷键: {self.hotkey_var.get()}")
+            result = self.hotkey_manager.register_hotkey(self.hotkey_var.get())
+            if result:
+                self.log(f"已注册快捷键: {self.hotkey_var.get()}")
+            else:
+                self.log("注册快捷键失败")
         except Exception as e:
             self.log(f"注册快捷键失败: {e}")
 
     def unregister_hotkey(self):
-        """取消注册热键"""
+        if not HotkeyManager.is_supported():
+            return
+        
         try:
-            keyboard.remove_hotkey(self.hotkey_var.get())
+            self.hotkey_manager.unregister_hotkey()
         except:
-            pass  # 忽略可能的错误，如热键尚未注册
+            pass
     
     def capture_hotkey(self, event):
         """实时捕获按键组合"""
