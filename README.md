@@ -19,8 +19,17 @@
   
 因为火山引擎的免费额度我还没用完，所以暂无其他推荐。大家有推荐的模型可以告诉我，我会添加到此处。
 
+## 同类型工具推荐
+- [SimpleTex](https://simpletex.cn/)，该软件功能非常强大，支持在识别结果上直接编辑，且支持转化为MathML和Typst（话说我或许也可以在这个工具中加入该功能？）。
+- [Mathpix](https://mathpix.com/)，老牌公式识别软件，就是免费额度略少。
+- [MixTeX](https://github.com/RQLuo/MixTeX-Latex-OCR)，离线OCR软件，完全免费，显卡还可以的小伙伴建议尝试，效果非常不错。
+- [MinerU](https://mineru.net/)，适合将整本pdf批量转化为markdown，可用于构建RAG使用的知识库。配合[RAGFlow](https://github.com/infiniflow/ragflow)食用很香。
 ## 未来计划
-如果用的人比较多，我也许会用tauri重写该工具。但作者今年即将毕业，升学/工作还无着落，且Rust仍在学习中……因此短期内如果工具没有严重问题可能不会继续该项目。
+如果用的人比较多，我也许会用tauri重写该工具。可能会增加一些功能，比如：
+- 支持MathML和Typst（刚刚想到）；
+- 识别+翻译；
+
+但作者今年即将毕业，升学/工作还无着落，且Rust仍在学习中……因此短期内如果工具没有严重问题可能会暂时搁置该项目。
 
 
 
