@@ -1,5 +1,6 @@
 openai
 pystray
+pyinstaller
 pyperclip
 httpx[socks]
 keyboard
