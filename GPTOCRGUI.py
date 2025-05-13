@@ -34,6 +34,8 @@ class ImageToMarkdown:
         #     self.log_callback(f"服务商已设置为: {provider}")
 
     def set_api_key(self, api_key):
+        if not api_key:
+            raise ValueError("API Key不能为空")
         os.environ['OPENAI_API_KEY'] = api_key
 
     def set_proxy(self, proxy):
