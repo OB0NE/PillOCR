@@ -458,7 +458,7 @@ class App:
     def stop_processing(self):
         self.processor.stop()
         if self.icon:
-            self.icon.icon = self.icon_image['processing']  # 改用 'processing' 状态
+            self.icon.icon = self.icon_image['stopped']  # 改用 'stopped' 状态
         self.running_state = False
         self.icon.menu = self.create_menu()  # 更新菜单
         self.log("已停止处理")
@@ -467,7 +467,8 @@ class App:
         width, height = 64, 32
         base_icon = self.create_capsule_icon('grey')
         self.icon_image = {
-            'processing': self.create_capsule_icon('grey'),
+            'stopped': self.create_capsule_icon('grey'),
+            'processing': self.create_capsule_icon('green-grey'),
             'success': self.create_capsule_icon('green'),
             'error': self.create_capsule_icon('red'),
         }
@@ -508,13 +509,15 @@ class App:
         draw = ImageDraw.Draw(image)
 
         if (color == 'grey'):
-            fill = (128, 128, 128, 255)
+            fill1, fill2 = (128, 128, 128, 255), (128, 128, 128, 255)
         elif (color == 'green'):
-            fill = (0, 255, 0, 255)
+            fill1, fill2 = (0, 255, 0, 255), (0, 255, 0, 255)
         elif (color == 'red'):
-            fill = (255, 0, 0, 255)
+            fill1, fill2 = (255, 0, 0, 255), (255, 0, 0, 255)
+        elif (color == 'green-grey'):
+            fill1, fill2 = (0, 255, 0, 255), (128, 128, 128, 255)
         else:
-            fill = (0, 255, 0, 255)  # 默认使用绿色
+            fill1, fill2 = (0, 255, 0, 255), (0, 255, 0, 255)  # 默认使用绿色
         
         capsule_height = 12 * scale
         capsule_width = 24 * scale
@@ -522,9 +525,10 @@ class App:
         x = (width - capsule_width) // 2
         y = (height - capsule_height) // 2
         
-        draw.ellipse([x, y, x + capsule_height, y + capsule_height], fill=fill, outline=None)
-        draw.ellipse([x + capsule_width - capsule_height, y, x + capsule_width, y + capsule_height], fill=fill, outline=None)
-        draw.rectangle([x + capsule_height//2, y, x + capsule_width - capsule_height//2, y + capsule_height], fill=fill, outline=None)
+        draw.ellipse([x, y, x + capsule_height, y + capsule_height], fill=fill1, outline=None)
+        draw.ellipse([x + capsule_width - capsule_height, y, x + capsule_width, y + capsule_height], fill=fill2, outline=None)
+        draw.rectangle([x + capsule_height//2, y, x + capsule_width//2, y + capsule_height], fill=fill1, outline=None)
+        draw.rectangle([x + capsule_width//2, y, x + capsule_width - capsule_height//2, y + capsule_height], fill=fill2, outline=None)
         
         image = image.resize((base_width, base_height), Image.Resampling.LANCZOS)
         
