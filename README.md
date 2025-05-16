@@ -36,8 +36,11 @@
 - 支持MathML和Typst（刚刚想到）；
 - 识别+翻译；
 - 添加其他显示语言；
-
 但作者今年即将毕业，升学/工作还无着落，且Rust仍在学习中……因此短期内如果工具没有严重问题可能会暂时搁置该项目。
 
+## 打赏支持
+如果这个工具对您有帮助的话，就请我吃个鸡腿吧~
+
+<img src="https://github.com/user-attachments/assets/a1105e53-13f6-4654-89fa-edfe878194e8" style="width:400px; height:auto;" alt="image">
 
 
