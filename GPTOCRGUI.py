@@ -477,7 +477,11 @@ class App:
             "PillOCR"
         )
         self.icon.menu = self.create_menu()
-        threading.Thread(target=self.icon.run, daemon=True).start()
+        # hand control of the AppKit run loop back to Tkinter
+        if platform.system() == "Darwin" and hasattr(self.icon, "run_detached"):
+            self.icon.run_detached()
+        else:
+            threading.Thread(target=self.icon.run, daemon=True).start()
 
     def create_menu(self):
         """创建托盘菜单"""
