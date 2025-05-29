@@ -2,6 +2,7 @@ import os
 import re
 import pystray
 import pyperclip
+import platform
 #import keyboard
 import threading
 import tkinter as tk
