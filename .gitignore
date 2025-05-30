@@ -13,7 +13,7 @@ GPTOCRGUI-deepseek.py
 Thumbs.db  # Windows
 
 # Python 编译缓存
-**/__pycache__/
+__pycache__/
 *.py[cod]
 
 # IDE 配置文件（示例）
