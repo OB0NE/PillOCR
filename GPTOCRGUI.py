@@ -931,5 +931,4 @@ if __name__ == "__main__":
     processor.log_callback = app.log
     processor.app = app
     root.withdraw()
-    app.update_icon_status('success')
     root.mainloop()
