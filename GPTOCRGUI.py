@@ -918,7 +918,7 @@ class App:
 
 if __name__ == "__main__":
     root = tk.Tk()
-    root.geometry("800x700+{}+{}".format(
+    root.geometry("800x800+{}+{}".format(
         root.winfo_screenwidth() // 2 - 400,  # 水平居中
         root.winfo_screenheight() // 2 - 400  # 垂直居中
     ))  # 调整窗口大小以适应新布局
