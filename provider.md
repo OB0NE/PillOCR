@@ -25,8 +25,8 @@ bailian.console.aliyun.com
 https://ai.google.dev/
 
 - gemini-2.5-pro
-  - \$1.25/M输入（输入<= 200k tokens） \$2.50/M输入（输入> 200k tokens）
-  - \$10.00/M输出（输入<= 200k tokens） \$15.00/M输出（输入> 200k tokens）（包括思维链）
+  - 免费
+  - 免费
   - 谷歌的视觉模型，支持Markdown和LaTex识别和排版
 - gemini-2.5-flash
   - 免费
