@@ -25,6 +25,10 @@ class HotkeyManager:
         self.callback = callback
         self.current_hotkey = None
         self.is_active = False
+        # 添加截图监听相关属性
+        self.screenshot_callback = None
+        self.screenshot_hotkey = None
+        self.screenshot_active = False
     
     def register_hotkey(self, hotkey_str):
         """注册热键
@@ -43,6 +47,26 @@ class HotkeyManager:
         Args:
             hotkey_str: 要取消的热键，如果为None则取消当前热键
             
+        Returns:
+            bool: 是否成功取消
+        """
+        raise NotImplementedError("子类必须实现此方法")
+    
+    def register_screenshot_listener(self, hotkey_str, callback):
+        """注册截图快捷键监听
+        
+        Args:
+            hotkey_str: 截图快捷键字符串
+            callback: 监听到快捷键时的回调函数
+            
+        Returns:
+            bool: 是否成功注册
+        """
+        raise NotImplementedError("子类必须实现此方法")
+    
+    def unregister_screenshot_listener(self):
+        """取消截图快捷键监听
+        
         Returns:
             bool: 是否成功取消
         """
@@ -108,6 +132,37 @@ class WindowsHotkeyManager(HotkeyManager):
             return True
         except Exception:
             return False
+    
+    def register_screenshot_listener(self, hotkey_str, callback):
+        if not KEYBOARD_AVAILABLE:
+            return False
+        
+        try:
+            # 先取消已有的截图监听
+            self.unregister_screenshot_listener()
+            
+            # 注册新的截图监听
+            keyboard.add_hotkey(hotkey_str, callback)
+            self.screenshot_hotkey = hotkey_str
+            self.screenshot_callback = callback
+            self.screenshot_active = True
+            return True
+        except Exception:
+            return False
+    
+    def unregister_screenshot_listener(self):
+        if not KEYBOARD_AVAILABLE:
+            return False
+            
+        try:
+            if self.screenshot_hotkey:
+                keyboard.remove_hotkey(self.screenshot_hotkey)
+                self.screenshot_hotkey = None
+                self.screenshot_callback = None
+                self.screenshot_active = False
+            return True
+        except Exception:
+            return False
 
 
 class MacOSHotkeyManager(HotkeyManager):
@@ -124,6 +179,20 @@ class MacOSHotkeyManager(HotkeyManager):
         if hotkey_str is None or hotkey_str == self.current_hotkey:
             self.current_hotkey = None
             self.is_active = False
+        return True
+    
+    def register_screenshot_listener(self, hotkey_str, callback):
+        # macOS上不支持，返回假成功
+        self.screenshot_hotkey = hotkey_str
+        self.screenshot_callback = callback
+        self.screenshot_active = False
+        return True
+    
+    def unregister_screenshot_listener(self):
+        # macOS上不支持，返回假成功
+        self.screenshot_hotkey = None
+        self.screenshot_callback = None
+        self.screenshot_active = False
         return True
 
 
