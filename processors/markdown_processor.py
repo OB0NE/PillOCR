@@ -20,12 +20,18 @@ class MarkdownProcessor:
             text = re.sub(r'\\\[(.*?)\\\]', 
                         lambda m: f'{left_wrapper}{m.group(1).strip()}{right_wrapper}', 
                         text, flags=re.DOTALL)
+            text = re.sub(r'\$\$(.*?)\$\$', 
+                        lambda m: f'{left_wrapper}{m.group(1).strip()}{right_wrapper}', 
+                        text, flags=re.DOTALL)
         
         # 处理行内公式
         inline_wrappers = self.inline_wrapper.split(' ')
         if len(inline_wrappers) == 2:
             left_inline, right_inline = inline_wrappers
             text = re.sub(r'\\\((.*?)\\\)', 
+                        lambda m: f'{left_inline}{m.group(1).strip()}{right_inline}', 
+                        text)
+            text = re.sub(r'(?<!\$)\$((?!\$).*?)\$(?!\$)', 
                         lambda m: f'{left_inline}{m.group(1).strip()}{right_inline}', 
                         text)
             
