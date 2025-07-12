@@ -229,8 +229,8 @@ class App:
         style.configure('TLabel', background=bg_color, foreground=text_color)
         style.configure('TFrame', background=bg_color)
         style.configure('TLabelframe', background=bg_color)
-        style.configure('TLabelframe.Label', background=bg_color, 
-                       foreground=text_color, font=('Segoe UI', 9))
+        style.configure('TLabelframe.Label', background=bg_color,
+                       foreground=text_color, font=('Segoe UI', 11, 'bold'))
         style.configure('TEntry', padding=6)
         style.configure('TCombobox', padding=6)
 
@@ -360,6 +360,8 @@ class App:
             height=4,
             bd=0,                         # 取消默认边框
             relief='flat',
+            bg=bg_color,
+            fg=text_color,
             highlightthickness=1.5,        # 边框宽度
             highlightbackground='#b3b0a9',  # 未聚焦时的灰色边框
             highlightcolor='#587d9d'        # 聚焦时的蓝色边框
@@ -377,6 +379,8 @@ class App:
             height=4,
             bd=0,                         # 取消默认边框
             relief='flat',
+            bg=bg_color,
+            fg=text_color,
             highlightthickness=1.5,        # 边框宽度
             highlightbackground='#b3b0a9',  # 未聚焦时的灰色边框
             highlightcolor='#587d9d'        # 聚焦时的蓝色边框
@@ -486,6 +490,8 @@ class App:
             text="程序启动时自动开始处理",
             variable=self.auto_start_var,
             command=self.save_auto_start_setting,
+            bg=bg_color,
+            fg=text_color
         )
         auto_start_check.pack(anchor='w')
 
@@ -497,8 +503,19 @@ class App:
         log_frame = ttk.LabelFrame(log_section, text="日志", padding=10, style='TLabelframe')
         log_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
 
-        self.log_text = tk.Text(log_frame, height=6, font=('Consolas', 9),
-                                bg='#f0f0f0', relief='flat', padx=5, pady=5)
+        self.log_text = tk.Text(
+            log_frame, 
+            height=6, 
+            font=('Consolas', 9),
+            bg='#eeeae7',  # 浅灰色背景
+            fg=text_color,
+            relief='flat',
+            highlightthickness=1.5,
+            highlightbackground='#b3b0a9',
+            highlightcolor='#587d9d',
+            padx=5,
+            pady=5
+        )
         self.log_text.pack(fill=tk.BOTH, expand=True)
         self.sections['日志'] = log_section
 
