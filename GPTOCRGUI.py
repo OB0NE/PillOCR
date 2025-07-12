@@ -229,8 +229,13 @@ class App:
         style.configure('TLabel', background=bg_color, foreground=text_color)
         style.configure('TFrame', background=bg_color)
         style.configure('TLabelframe', background=bg_color)
+        # 根据操作系统调整 LabelFrame 标题字体大小
+        if platform.system() == 'Darwin':
+            lf_label_font = ('Segoe UI', 11, 'bold')
+        else:
+            lf_label_font = ('Segoe UI', 9, 'bold')
         style.configure('TLabelframe.Label', background=bg_color,
-                       foreground=text_color, font=('Segoe UI', 11, 'bold'))
+                       foreground=text_color, font=lf_label_font)
         style.configure('TEntry', padding=6)
         style.configure('TCombobox', padding=6)
 
