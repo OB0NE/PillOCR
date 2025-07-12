@@ -1,5 +1,4 @@
 import platform
-import threading
 
 # 平台检测
 CURRENT_PLATFORM = platform.system()

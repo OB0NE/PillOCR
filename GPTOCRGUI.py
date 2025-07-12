@@ -26,14 +26,26 @@ class ImageToMarkdown:
         self.gpt_model = 'gpt-4o'
         self.image_encoder = ImageEncoder()
         self.markdown_processor = MarkdownProcessor()
-        self.current_provider = 'OPENAI'  # 添加服务商标识
+        self.current_provider = 'OPENAI' 
         self.temp_process_complete = True
+        self.system_prompt = (
+            "You are a helpful assistant that converts images to markdown format. "
+            "If the image contains mathematical formulas, use LaTeX syntax for them. "
+            "Return only the markdown content of the image, without any additional words or explanations."
+        )
+        self.user_prompt = "Here is my image."
+        self.max_tokens = 1000
+
+    def set_prompts(self, system_prompt, user_prompt):
+        self.system_prompt = system_prompt
+        self.user_prompt = user_prompt
+
+    def set_max_tokens(self, max_tokens):
+        self.max_tokens = max_tokens
 
     def set_provider(self, provider):
         """设置当前服务商"""
         self.current_provider = provider
-        # if self.log_callback:
-        #     self.log_callback(f"服务商已设置为: {provider}")
 
     def set_api_key(self, api_key):
         if not api_key:
@@ -99,12 +111,12 @@ class ImageToMarkdown:
             messages=[
                 {
                     "role": "system",
-                    "content": "You are a helpful assistant that converts images to markdown format. If the image contains mathematical formulas, use LaTeX syntax for them. Return only the markdown content of the image, without any additional words or explanations."
+                    "content": self.system_prompt
                 },
                 {
                     "role": "user",
                     "content": [
-                        {"type": "text", "text": "Here is my image."},
+                        {"type": "text", "text": self.user_prompt},
                         {
                             "type": "image_url",
                             "image_url": {"url": f"{base64_img}"}
@@ -112,7 +124,7 @@ class ImageToMarkdown:
                     ],
                 }
             ],
-            max_tokens=1000,
+            max_tokens=self.max_tokens,
         )
         print(response)
         markdown_content = response.choices[0].message.content
@@ -191,6 +203,9 @@ class App:
         self.screenshot_hotkey_var = tk.StringVar(value='ctrl+shift+a')  # 添加截图快捷键变量
         self.provider_var = tk.StringVar(value='OPENAI')  # 确保 provider_var 在 load_settings 之前定义
         self.url_var = tk.StringVar(value='')
+        self.system_prompt_var = tk.StringVar(value=self.processor.system_prompt)
+        self.user_prompt_var   = tk.StringVar(value=self.processor.user_prompt)
+        self.max_tokens_var    = tk.IntVar(   value=self.processor.max_tokens)
         self.auto_start_var = tk.BooleanVar(value=True)  # 添加自动启动变量
         self.log_text = tk.Text()  # 确保 log_text 在 load_settings 之前定义
         self.root = root
@@ -251,15 +266,31 @@ class App:
         main_frame = ttk.Frame(root, padding=20, style='TFrame')
         main_frame.pack(fill=tk.BOTH, expand=True)
 
-        # 左右两栏
-        left_frame = ttk.Frame(main_frame, style='TFrame')
-        left_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=False, padx=(0, 20))
-        
-        right_frame = ttk.Frame(main_frame, style='TFrame')
-        right_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+        # 左侧导航
+        nav_frame = ttk.Frame(main_frame, style='TFrame')
+        nav_frame.pack(side=tk.LEFT, fill=tk.Y, padx=(0,10))
+        categories = ['模型设置','代理设置','LaTeX设置','其他设置', '日志']
+        if HotkeyManager.should_show_ui():
+            categories.append('快捷键设置')
+        for cat in categories:
+            btn = ttk.Button(nav_frame, text=cat,
+                             command=lambda c=cat: self.show_section(c))
+            btn.pack(fill=tk.X, pady=5)
 
-        # 左侧设置项
-        self.provider_frame = ttk.LabelFrame(left_frame, text="服务商选择", padding=10, style='TLabelframe')
+        # 在导航栏和内容区之间添加灰色竖线分隔
+        separator = tk.Frame(main_frame, width=1.5, bg='#CCCCCC')
+        separator.pack(side=tk.LEFT, fill=tk.Y, padx=(0,10))
+
+        # 右侧内容区
+        self.content_frame = ttk.Frame(main_frame, style='TFrame')
+        self.content_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+        # 各分类的 Frame 容器
+        self.sections = {}
+
+        # ——— 模型设置 区块 ———
+        model_section = ttk.Frame(self.content_frame, style='TFrame')
+        self.provider_frame = ttk.LabelFrame(model_section, text="服务商选择", padding=10, style='TLabelframe')
         self.provider_frame.pack(fill=tk.X, pady=(0, 10))
             # 添加服务商映射
         self.PROVIDER_MAPPING = {
@@ -277,13 +308,13 @@ class App:
         self.provider_dropdown.bind('<<ComboboxSelected>>', self.on_provider_change)
 
         # 自定义 URL 配置，先隐藏，只有选择自定义才显示
-        self.custom_url_frame = ttk.LabelFrame(left_frame, text="Base_Url", padding=10, style='TLabelframe')
+        self.custom_url_frame = ttk.LabelFrame(model_section, text="Base_Url", padding=10, style='TLabelframe')
         self.url_entry = ttk.Entry(self.custom_url_frame, textvariable=self.url_var)
         self.url_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=10)
         ttk.Button(self.custom_url_frame, text="保存", command=self.save_custom_url).pack(side=tk.RIGHT)
         
         # API Key 设置
-        api_frame = ttk.LabelFrame(left_frame, text="API Key", padding=10, style='TLabelframe')
+        api_frame = ttk.LabelFrame(model_section, text="API Key", padding=10, style='TLabelframe')
         api_frame.pack(fill=tk.X, pady=(0, 10))
 
         self.api_key_entry = ttk.Entry(api_frame, textvariable=self.api_key_var, show="•")
@@ -292,17 +323,8 @@ class App:
         self.save_api_button = ttk.Button(api_frame, text="保存", command=self.save_api_key)
         self.save_api_button.pack(side=tk.RIGHT)
 
-        # 代理设置
-        proxy_frame = ttk.LabelFrame(left_frame, text="代理设置", padding=10, style='TLabelframe')
-        proxy_frame.pack(fill=tk.X, pady=(0, 10))
-
-        ttk.Label(proxy_frame, text="HTTP代理:").pack(side=tk.LEFT)
-        self.proxy_entry = ttk.Entry(proxy_frame, textvariable=self.proxy_var)
-        self.proxy_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=10)
-        ttk.Button(proxy_frame, text="保存", command=self.save_proxy).pack(side=tk.RIGHT)
-
         # 模型选择
-        self.model_frame = ttk.LabelFrame(left_frame, text="模型选择（请确保模型具有视觉功能）", padding=10, style='TLabelframe')
+        self.model_frame = ttk.LabelFrame(model_section, text="模型选择（请确保模型具有视觉功能）", padding=10, style='TLabelframe')
         self.model_dropdown = ttk.Combobox(self.model_frame, textvariable=self.model_var,
                                            state='readonly')
         ttk.Button(self.model_frame, text="保存", command=self.save_model_choice).pack(side=tk.RIGHT)
@@ -310,19 +332,86 @@ class App:
         self.model_dropdown.bind('<<ComboboxSelected>>', self.save_model_choice)
 
         # 模型输入框
-        self.model_entry_frame= ttk.LabelFrame(left_frame, text="模型（请确保模型具有视觉功能）", padding=10, style='TLabelframe')
+        self.model_entry_frame= ttk.LabelFrame(model_section, text="模型（请确保模型具有视觉功能）", padding=10, style='TLabelframe')
         self.model_entry=ttk.Entry(self.model_entry_frame, textvariable=self.model_var)
         self.model_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 10))
         ttk.Button(self.model_entry_frame, text="保存", command=self.save_model_choice).pack(side=tk.RIGHT)
 
         # 推理接入点框架
-        self.endpoint_frame = ttk.LabelFrame(left_frame, text="推理接入点（请确保模型具有视觉功能）", padding=10, style='TLabelframe')
+        self.endpoint_frame = ttk.LabelFrame(model_section, text="推理接入点（请确保模型具有视觉功能）", padding=10, style='TLabelframe')
         self.endpoint_entry = ttk.Entry(self.endpoint_frame, textvariable=self.model_var)
         self.endpoint_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 10))
         ttk.Button(self.endpoint_frame, text="保存", command=self.save_model_choice).pack(side=tk.RIGHT)
 
+        # Prompt & Token 设置框
+        self.system_prompt_var = tk.StringVar(value=self.processor.system_prompt)
+        self.user_prompt_var   = tk.StringVar(value=self.processor.user_prompt)
+        self.max_tokens_var    = tk.IntVar(   value=self.processor.max_tokens)
+
+        prompt_frame = ttk.LabelFrame(model_section, text="Prompt & Token 设置", padding=10, style='TLabelframe')
+        prompt_frame.pack(fill=tk.X, pady=(0, 10))
+
+        # system prompt：多行 Text，自动换行
+        system_frame = ttk.Frame(prompt_frame, style='TFrame')
+        ttk.Label(system_frame, text="System Prompt:").pack(side=tk.TOP, anchor='w')
+        self.system_text = tk.Text(
+            system_frame,
+            wrap='word',
+            height=4,
+            bd=0,                         # 取消默认边框
+            relief='flat',
+            highlightthickness=1.5,        # 边框宽度
+            highlightbackground='#b3b0a9',  # 未聚焦时的灰色边框
+            highlightcolor='#587d9d'        # 聚焦时的蓝色边框
+        )
+        self.system_text.insert('1.0', self.system_prompt_var.get())
+        self.system_text.pack(fill=tk.X, expand=True, pady=(2,5))
+        system_frame.pack(fill=tk.X, pady=(0,5))
+
+        # user prompt：多行 Text，自动换行
+        user_frame = ttk.Frame(prompt_frame, style='TFrame')
+        ttk.Label(user_frame, text="User Prompt:").pack(side=tk.TOP, anchor='w')
+        self.user_text  = tk.Text(
+            user_frame,
+            wrap='word',
+            height=4,
+            bd=0,                         # 取消默认边框
+            relief='flat',
+            highlightthickness=1.5,        # 边框宽度
+            highlightbackground='#b3b0a9',  # 未聚焦时的灰色边框
+            highlightcolor='#587d9d'        # 聚焦时的蓝色边框
+        )
+        self.user_text.insert('1.0', self.user_prompt_var.get())
+        self.user_text.pack(fill=tk.X, expand=True, pady=(2,5))
+        user_frame.pack(fill=tk.X, pady=(0,5))
+
+        # max_tokens
+        max_frame = ttk.Frame(prompt_frame, style='TFrame')
+        ttk.Label(max_frame, text="Max Tokens:").pack(side=tk.LEFT)
+        ttk.Entry(max_frame, textvariable=self.max_tokens_var, width=8).pack(side=tk.LEFT, padx=(10,0))
+        max_frame.pack(fill=tk.X)
+        
+        ttk.Button(prompt_frame, text="保存", command=self.save_prompt_settings).pack(side=tk.RIGHT)
+
+        self.sections['模型设置'] = model_section
+
+        # ——— 代理设置 区块 ———
+        proxy_section = ttk.Frame(self.content_frame, style='TFrame')
+        # 代理设置
+        proxy_frame = ttk.LabelFrame(proxy_section, text="代理设置", padding=10, style='TLabelframe')
+        proxy_frame.pack(fill=tk.X, pady=(0, 10))
+
+        ttk.Label(proxy_frame, text="HTTP代理:").pack(side=tk.LEFT)
+        self.proxy_entry = ttk.Entry(proxy_frame, textvariable=self.proxy_var)
+        self.proxy_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=10)
+        ttk.Button(proxy_frame, text="保存", command=self.save_proxy).pack(side=tk.RIGHT)
+
+        self.sections['代理设置'] = proxy_section
+
+        # ——— LaTeX 设置 区块 ———
+        latex_section = ttk.Frame(self.content_frame, style='TFrame')
         # LaTeX 设置
-        latex_frame = ttk.LabelFrame(left_frame, text="LaTeX 设置", padding=10, style='TLabelframe')
+        latex_frame = ttk.LabelFrame(latex_section, text="LaTeX 设置", padding=10, style='TLabelframe')
         latex_frame.pack(fill=tk.X, pady=(0, 10))
 
         inline_frame = ttk.Frame(latex_frame, style='TFrame')
@@ -339,48 +428,82 @@ class App:
                                    values=['$$ $$', '\\[ \\]'])
         block_combo.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(10, 0))
 
-        # 启动设置
-        startup_frame = ttk.LabelFrame(left_frame, text="启动设置", padding=10, style='TLabelframe')
-        startup_frame.pack(fill=tk.X, pady=(0, 10))
+        self.sections['LaTeX设置'] = latex_section
         
-        auto_start_check = ttk.Checkbutton(startup_frame, text="程序启动时自动开始处理",
-                                          variable=self.auto_start_var,
-                                          command=self.save_auto_start_setting)
-        auto_start_check.pack(anchor='w')
-
-        # 根据平台决定是否显示热键设置UI
+        # ——— 快捷键设置 区块 ———
+        hotkey_section = ttk.Frame(self.content_frame, style='TFrame')
         if HotkeyManager.should_show_ui():
-            hotkey_frame = ttk.LabelFrame(left_frame, text="快捷键设置", padding=10, style='TLabelframe')
+            hotkey_frame = ttk.LabelFrame(hotkey_section, text="快捷键设置", padding=10, style='TLabelframe')
             hotkey_frame.pack(fill=tk.X, pady=(0, 10))
 
-            hotkey_input_frame = ttk.Frame(hotkey_frame, style='TFrame')
-            hotkey_input_frame.pack(fill=tk.X, pady=(0, 5))
-            ttk.Label(hotkey_input_frame, text="启动/停止快捷键:").pack(side=tk.LEFT)
-            self.hotkey_entry = ttk.Entry(hotkey_input_frame, textvariable=self.hotkey_var)
-            self.hotkey_entry.bind('<Key>', self.capture_hotkey)
-            self.hotkey_entry.bind('<FocusOut>', self.finalize_hotkey)
-            self.hotkey_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(10, 10))
-            save_hotkey_button = ttk.Button(hotkey_input_frame, text="保存", command=self.save_hotkey)
-            save_hotkey_button.pack(side=tk.RIGHT)
+            # 启动/停止快捷键（三个单键输入框 + “+” 分隔）
+            hk_start_frame = ttk.Frame(hotkey_frame, style='TFrame')
+            hk_start_frame.pack(fill=tk.X, pady=(0,5))
+            # 统一第一列宽度，确保对齐
+            hk_start_frame.grid_columnconfigure(0, minsize=140)
+            ttk.Label(hk_start_frame, text="启动/停止快捷键:").grid(row=0, column=0, padx=(0,5))
+            self.hk1 = ttk.Entry(hk_start_frame, width=5)
+            self.hk2 = ttk.Entry(hk_start_frame, width=5)
+            self.hk3 = ttk.Entry(hk_start_frame, width=5)
+            self.hk1.grid(row=0, column=1)
+            ttk.Label(hk_start_frame, text="+").grid(row=0, column=2, padx=2)
+            self.hk2.grid(row=0, column=3)
+            ttk.Label(hk_start_frame, text="+").grid(row=0, column=4, padx=2)
+            self.hk3.grid(row=0, column=5)
+            ttk.Button(hk_start_frame, text="保存", command=self.save_hotkey).grid(row=0, column=6, padx=(10,0))
+            for e in (self.hk1, self.hk2, self.hk3):
+                e.bind('<FocusIn>', lambda ev: ev.widget.delete(0, tk.END))
+                e.bind('<Key>', self.capture_hotkey)
 
-            # 添加截图快捷键设置
-            screenshot_hotkey_frame = ttk.Frame(hotkey_frame, style='TFrame')
-            screenshot_hotkey_frame.pack(fill=tk.X, pady=(5, 0))
-            ttk.Label(screenshot_hotkey_frame, text="截图监听快捷键:").pack(side=tk.LEFT)
-            self.screenshot_hotkey_entry = ttk.Entry(screenshot_hotkey_frame, textvariable=self.screenshot_hotkey_var)
-            self.screenshot_hotkey_entry.bind('<Key>', self.capture_screenshot_hotkey)
-            self.screenshot_hotkey_entry.bind('<FocusOut>', self.finalize_screenshot_hotkey)
-            self.screenshot_hotkey_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(10, 10))
-            save_screenshot_hotkey_button = ttk.Button(screenshot_hotkey_frame, text="保存", command=self.save_screenshot_hotkey)
-            save_screenshot_hotkey_button.pack(side=tk.RIGHT)
+            # 截图监听快捷键（三个单键输入框 + “+” 分隔）
+            hk_snap_frame = ttk.Frame(hotkey_frame, style='TFrame')
+            hk_snap_frame.pack(fill=tk.X, pady=(5,0))
+            # 统一第一列宽度，确保对齐
+            hk_snap_frame.grid_columnconfigure(0, minsize=140)
+            ttk.Label(hk_snap_frame, text="截图监听快捷键:").grid(row=0, column=0, padx=(0,5))
+            self.sk1 = ttk.Entry(hk_snap_frame, width=5)
+            self.sk2 = ttk.Entry(hk_snap_frame, width=5)
+            self.sk3 = ttk.Entry(hk_snap_frame, width=5)
+            self.sk1.grid(row=0, column=1)
+            ttk.Label(hk_snap_frame, text="+").grid(row=0, column=2, padx=2)
+            self.sk2.grid(row=0, column=3)
+            ttk.Label(hk_snap_frame, text="+").grid(row=0, column=4, padx=2)
+            self.sk3.grid(row=0, column=5)
+            ttk.Button(hk_snap_frame, text="保存", command=self.save_screenshot_hotkey).grid(row=0, column=6, padx=(10,0))
+            for e in (self.sk1, self.sk2, self.sk3):
+                e.bind('<FocusIn>', lambda ev: ev.widget.delete(0, tk.END))
+                e.bind('<Key>', self.capture_hotkey)
 
-        # 右侧日志显示
-        log_frame = ttk.LabelFrame(right_frame, text="日志", padding=10, style='TLabelframe')
+        self.sections['快捷键设置'] = hotkey_section
+        
+        # ——— 其他设置 区块 ———
+        others_section = ttk.Frame(self.content_frame, style='TFrame')
+        # 启动设置
+        startup_frame = ttk.LabelFrame(others_section, text="启动设置", padding=10, style='TLabelframe')
+        startup_frame.pack(fill=tk.X, pady=(0, 10))
+        auto_start_check = tk.Checkbutton(
+            startup_frame,
+            text="程序启动时自动开始处理",
+            variable=self.auto_start_var,
+            command=self.save_auto_start_setting,
+        )
+        auto_start_check.pack(anchor='w')
+
+        self.sections['其他设置'] = others_section
+
+        # ——— 日志 区块 ———
+        log_section = ttk.Frame(self.content_frame, style='TFrame')
+        # 日志显示
+        log_frame = ttk.LabelFrame(log_section, text="日志", padding=10, style='TLabelframe')
         log_frame.pack(fill=tk.BOTH, expand=True, pady=(0, 10))
 
         self.log_text = tk.Text(log_frame, height=6, font=('Consolas', 9),
                                 bg='#f0f0f0', relief='flat', padx=5, pady=5)
         self.log_text.pack(fill=tk.BOTH, expand=True)
+        self.sections['日志'] = log_section
+
+        # 默认显示
+        self.show_section('日志')
 
         # 设置窗口图标
         icon_path = get_absolute_path('ocrgui.ico')
@@ -422,6 +545,12 @@ class App:
         elif self.provider_var.get() == '自定义':
             self.model_frame.pack_forget()
 
+    def show_section(self, name):
+        """在内容区切换到指定分类的 Frame"""
+        for sec in self.sections.values():
+            sec.pack_forget()
+        self.sections[name].pack(fill=tk.BOTH, expand=True)
+
     def debounced_update_wrappers(self, *args):
         """防抖包装符更新"""
         DEBOUNCE_TIME = 2.0  # 1秒防抖时间
@@ -460,10 +589,15 @@ class App:
             return
             
         try:
+            # 从三个输入框拼接
+            parts = [self.hk1.get().strip(), self.hk2.get().strip(), self.hk3.get().strip()]
+            combo = '+'.join(p.lower() for p in parts if p)
+            self.hotkey_var.set(combo)
+
             self.unregister_hotkey()
             self.register_hotkey()
             self.save_settings()
-            self.log(f"启动/停止快捷键已设置为: {self.hotkey_var.get()}")
+            self.log(f"启动/停止快捷键已设置为: {combo}")
         except Exception as e:
             self.log(f"快捷键设置失败: {e}")
 
@@ -492,33 +626,43 @@ class App:
     
     def capture_hotkey(self, event):
         """实时捕获按键组合"""
-        modifiers = []
-        if event.state & 0x0001: modifiers.append('shift')
-        if event.state & 0x0004: modifiers.append('ctrl')
-        if event.state & 0x0008: modifiers.append('alt')
-        
         key = event.keysym.lower()
-        if key not in modifiers:
-            combo = '+'.join(modifiers + [key]) if modifiers else key
-            self.hotkey_var.set(combo)
+        # 归一化左右修饰键
+        mod_map = {
+            'shift_l': 'shift', 'shift_r': 'shift',
+            'control_l': 'ctrl', 'control_r': 'ctrl',
+            'alt_l': 'alt',     'alt_r': 'alt'
+        }
+        key = mod_map.get(key, key)
+        event.widget.delete(0, tk.END)
+        event.widget.insert(0, key)
+        # modifiers = []
+        # if event.state & 0x0001: modifiers.append('shift')
+        # if event.state & 0x0004: modifiers.append('ctrl')
+        # if event.state & 0x0008: modifiers.append('alt')
+        
+        # key = event.keysym.lower()
+        # if key not in modifiers:
+        #     combo = '+'.join(modifiers + [key]) if modifiers else key
+        #     self.hotkey_var.set(combo)
         return "break"  # 阻止默认输入
 
     def finalize_hotkey(self, event):
         """失去焦点时保存热键"""
         self.save_hotkey()
 
-    def capture_screenshot_hotkey(self, event):
-        """实时捕获截图快捷键组合"""
-        modifiers = []
-        if event.state & 0x0001: modifiers.append('shift')
-        if event.state & 0x0004: modifiers.append('ctrl')
-        if event.state & 0x0008: modifiers.append('alt')
+    # def capture_screenshot_hotkey(self, event):
+    #     """实时捕获截图快捷键组合"""
+    #     modifiers = []
+    #     if event.state & 0x0001: modifiers.append('shift')
+    #     if event.state & 0x0004: modifiers.append('ctrl')
+    #     if event.state & 0x0008: modifiers.append('alt')
         
-        key = event.keysym.lower()
-        if key not in modifiers:
-            combo = '+'.join(modifiers + [key]) if modifiers else key
-            self.screenshot_hotkey_var.set(combo)
-        return "break"  # 阻止默认输入
+    #     key = event.keysym.lower()
+    #     if key not in modifiers:
+    #         combo = '+'.join(modifiers + [key]) if modifiers else key
+    #         self.screenshot_hotkey_var.set(combo)
+    #     return "break"  # 阻止默认输入
 
     def finalize_screenshot_hotkey(self, event):
         """失去焦点时保存截图快捷键"""
@@ -530,10 +674,14 @@ class App:
             return
             
         try:
+            parts = [self.sk1.get().strip(), self.sk2.get().strip(), self.sk3.get().strip()]
+            combo = '+'.join(p.lower() for p in parts if p)
+            self.screenshot_hotkey_var.set(combo)
+
             self.unregister_screenshot_listener()
             self.register_screenshot_listener()
             self.save_settings()
-            self.log(f"截图监听快捷键已设置为: {self.screenshot_hotkey_var.get()}")
+            self.log(f"截图监听快捷键已设置为: {combo}")
         except Exception as e:
             self.log(f"截图快捷键设置失败: {e}")
 
@@ -764,6 +912,20 @@ class App:
         # 确保在应用设置时更新客户端
         self.update_client_settings()
 
+    def save_prompt_settings(self):
+        prompts = {
+            'system_prompt': self.system_prompt_var.get(),
+            'user_prompt':   self.user_prompt_var.get(),
+            'max_tokens':    self.max_tokens_var.get()
+        }
+        self.processor.set_prompts(prompts['system_prompt'], prompts['user_prompt'])
+        self.processor.set_max_tokens(prompts['max_tokens'])
+        # 持久化到配置
+        cfg = self.config_manager.load() or {}
+        cfg.setdefault('prompt_settings', {}).update(prompts)
+        self.config_manager.save(cfg)
+        self.log("Prompt & Max Tokens 设置已保存")
+
     def save_settings(self):
         """保存所有设置"""
         display_provider = self.provider_var.get()
@@ -801,8 +963,13 @@ class App:
                 'block_wrapper': self.block_var.get()
             },
             'hotkey': self.hotkey_var.get(),
-            'screenshot_hotkey': self.screenshot_hotkey_var.get(),  # 添加截图快捷键保存
-            'auto_start': self.auto_start_var.get()  # 添加自动启动设置保存
+            'screenshot_hotkey': self.screenshot_hotkey_var.get(),  # 截图快捷键保存
+            'auto_start': self.auto_start_var.get(),  # 自动启动设置保存
+            'prompt_settings': {
+                'system_prompt': self.system_prompt_var.get(),
+                'user_prompt':   self.user_prompt_var.get(),
+                'max_tokens':    self.max_tokens_var.get()
+            }
         }
         
         try:
@@ -848,6 +1015,20 @@ class App:
             self.auto_start_var.set(config.get('auto_start', True))  # 加载自动启动设置，默认为True
             self.register_hotkey()  # 注册热键
             self.register_screenshot_listener()  # 注册截图监听
+
+            prompt_settings = config.get('prompt_settings', {
+                'system_prompt': self.processor.system_prompt,
+                'user_prompt':   self.processor.user_prompt,
+                'max_tokens':    self.processor.max_tokens
+            })
+            self.system_prompt_var.set(prompt_settings['system_prompt'])
+            self.user_prompt_var.set(  prompt_settings['user_prompt'])
+            self.max_tokens_var.set(   prompt_settings['max_tokens'])
+            self.processor.set_prompts(
+                self.system_prompt_var.get(),
+                self.user_prompt_var.get()
+            )
+            self.processor.set_max_tokens(self.max_tokens_var.get())
 
             # 更新所有设置
             self.apply_provider_settings()
@@ -918,7 +1099,7 @@ class App:
 
 if __name__ == "__main__":
     root = tk.Tk()
-    root.geometry("800x800+{}+{}".format(
+    root.geometry("800x600+{}+{}".format(
         root.winfo_screenwidth() // 2 - 400,  # 水平居中
         root.winfo_screenheight() // 2 - 400  # 垂直居中
     ))  # 调整窗口大小以适应新布局

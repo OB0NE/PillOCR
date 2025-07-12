@@ -3,7 +3,7 @@
 
 #define MyAppRoot ".."
 #define MyAppName "PillOCR"
-#define MyAppVersion "0.0.1"
+#define MyAppVersion "0.1.0"
 #define MyAppPublisher "ZhouZhiwu"
 #define MyAppExeName "PillOCR.exe"
 
