@@ -55,7 +55,7 @@ class ImageToMarkdown:
 
     def set_api_key(self, api_key):
         if not api_key:
-            raise ValueError("API Key不能为空")
+            self.log_callback("API Key不能为空")
         os.environ['OPENAI_API_KEY'] = api_key
 
     def set_proxy(self, proxy):
@@ -86,7 +86,7 @@ class ImageToMarkdown:
                 # 从app获取用户设置的URL
                 custom_url = self.app.url_var.get().strip()
                 if not custom_url:
-                    raise ValueError("自定义URL不能为空")
+                    self.log_callback("自定义URL不能为空")
                     
                 if proxy:
                     self.client = OpenAI(
@@ -104,6 +104,9 @@ class ImageToMarkdown:
                 self.log_callback(f"设置客户端时出错: {str(e)}")
 
     def set_gpt_model(self, model_name):
+        if not model_name:
+            self.log_callback("模型不能为空")
+            return
         self.gpt_model = model_name
 
     def process_image(self, image):
@@ -258,7 +261,7 @@ class App:
         # 左侧导航
         nav_frame = ttk.Frame(main_frame, style='TFrame')
         nav_frame.pack(side=tk.LEFT, fill=tk.Y, padx=(0,10))
-        categories = ['模型设置','代理设置','LaTeX设置','其他设置', '日志']
+        categories = ['模型设置','LaTeX设置','其他设置', '日志']
         if HotkeyManager.should_show_ui():
             categories.append('快捷键设置')
         for cat in categories:
@@ -299,7 +302,7 @@ class App:
         # 自定义 URL 配置，先隐藏，只有选择自定义才显示
         self.custom_url_frame = ttk.LabelFrame(model_section, text="Base_Url", padding=10, style='TLabelframe')
         self.url_entry = ttk.Entry(self.custom_url_frame, textvariable=self.url_var)
-        self.url_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=10)
+        self.url_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 10))
         ttk.Button(self.custom_url_frame, text="保存", command=self.save_custom_url).pack(side=tk.RIGHT)
         
         # API Key 设置
@@ -331,6 +334,15 @@ class App:
         self.endpoint_entry = ttk.Entry(self.endpoint_frame, textvariable=self.model_var)
         self.endpoint_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=(0, 10))
         ttk.Button(self.endpoint_frame, text="保存", command=self.save_model_choice).pack(side=tk.RIGHT)
+
+        # 代理设置
+        proxy_frame = ttk.LabelFrame(model_section, text="代理设置", padding=10, style='TLabelframe')
+        proxy_frame.pack(fill=tk.X, pady=(0, 10))
+
+        ttk.Label(proxy_frame, text="HTTP代理:").pack(side=tk.LEFT)
+        self.proxy_entry = ttk.Entry(proxy_frame, textvariable=self.proxy_var)
+        self.proxy_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=10)
+        ttk.Button(proxy_frame, text="保存", command=self.save_proxy).pack(side=tk.RIGHT)
 
         # Prompt & Token 设置框
         self.system_prompt_var = tk.StringVar(value=self.processor.system_prompt)
@@ -384,22 +396,22 @@ class App:
         ttk.Entry(max_frame, textvariable=self.max_tokens_var, width=8).pack(side=tk.LEFT, padx=(10,0))
         max_frame.pack(fill=tk.X)
         
-        ttk.Button(prompt_frame, text="保存", command=self.save_prompt_settings).pack(side=tk.RIGHT)
+        ttk.Button(prompt_frame, text="保存", command=self.save_settings).pack(side=tk.RIGHT)
 
         self.sections['模型设置'] = model_section
 
-        # ——— 代理设置 区块 ———
-        proxy_section = ttk.Frame(self.content_frame, style='TFrame')
-        # 代理设置
-        proxy_frame = ttk.LabelFrame(proxy_section, text="代理设置", padding=10, style='TLabelframe')
-        proxy_frame.pack(fill=tk.X, pady=(0, 10))
+        # # ——— 代理设置 区块 ———
+        # proxy_section = ttk.Frame(self.content_frame, style='TFrame')
+        # # 代理设置
+        # proxy_frame = ttk.LabelFrame(proxy_section, text="代理设置", padding=10, style='TLabelframe')
+        # proxy_frame.pack(fill=tk.X, pady=(0, 10))
 
-        ttk.Label(proxy_frame, text="HTTP代理:").pack(side=tk.LEFT)
-        self.proxy_entry = ttk.Entry(proxy_frame, textvariable=self.proxy_var)
-        self.proxy_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=10)
-        ttk.Button(proxy_frame, text="保存", command=self.save_proxy).pack(side=tk.RIGHT)
+        # ttk.Label(proxy_frame, text="HTTP代理:").pack(side=tk.LEFT)
+        # self.proxy_entry = ttk.Entry(proxy_frame, textvariable=self.proxy_var)
+        # self.proxy_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=10)
+        # ttk.Button(proxy_frame, text="保存", command=self.save_proxy).pack(side=tk.RIGHT)
 
-        self.sections['代理设置'] = proxy_section
+        # self.sections['代理设置'] = proxy_section
 
         # ——— LaTeX 设置 区块 ———
         latex_section = ttk.Frame(self.content_frame, style='TFrame')
@@ -848,6 +860,16 @@ class App:
             self.processor.set_gpt_model(settings.get('model', ''))
         elif current_provider == '自定义':
             self.processor.set_gpt_model(settings.get('model', ''))
+            
+        # 更新Prompt&Token 设置
+        prov_cfg = settings.get('prompt_settings', {})
+        self.processor.set_prompts(
+            prov_cfg.get('system_prompt', 'You are a helpful assistant that converts images to markdown format. If the image contains mathematical formulas, use LaTeX syntax for them. Return only the markdown content of the image, without any additional words or explanations.'),
+            prov_cfg.get('user_prompt', 'Here is my image.')
+        )
+        self.processor.set_max_tokens(
+            prov_cfg.get('max_tokens', '1000')
+        )
 
     def apply_provider_settings(self):
         """处理和切换服务商相关的 UI 界面更新和组件显示"""
@@ -894,19 +916,19 @@ class App:
         # 确保在应用设置时更新客户端
         self.update_client_settings()
 
-    def save_prompt_settings(self):
-        prompts = {
-            'system_prompt': self.system_prompt_var.get(),
-            'user_prompt':   self.user_prompt_var.get(),
-            'max_tokens':    self.max_tokens_var.get()
-        }
-        self.processor.set_prompts(prompts['system_prompt'], prompts['user_prompt'])
-        self.processor.set_max_tokens(prompts['max_tokens'])
-        # 持久化到配置
-        cfg = self.config_manager.load() or {}
-        cfg.setdefault('prompt_settings', {}).update(prompts)
-        self.config_manager.save(cfg)
-        self.log("Prompt & Max Tokens 设置已保存")
+    # def save_prompt_settings(self):
+    #     prompts = {
+    #         'system_prompt': self.system_prompt_var.get(),
+    #         'user_prompt':   self.user_prompt_var.get(),
+    #         'max_tokens':    self.max_tokens_var.get()
+    #     }
+    #     self.processor.set_prompts(prompts['system_prompt'], prompts['user_prompt'])
+    #     self.processor.set_max_tokens(prompts['max_tokens'])
+    #     # 持久化到配置
+    #     cfg = self.config_manager.load() or {}
+    #     cfg.setdefault('prompt_settings', {}).update(prompts)
+    #     self.config_manager.save(cfg)
+    #     self.log("Prompt & Max Tokens 设置已保存")
 
     def save_settings(self):
         """保存所有设置"""
@@ -936,22 +958,28 @@ class App:
             
         self.provider_settings[current_provider] = settings
         
-        # 添加LaTeX包装符设置
+        # 保存 LaTeX 包装符
+        latex_cfg = {
+            'inline_wrapper': self.inline_var.get(),
+            'block_wrapper':  self.block_var.get()
+        }
+
+        # prompt_settings 
+        self.provider_settings[current_provider].setdefault('prompt_settings', {})
+        self.provider_settings[current_provider]['prompt_settings'].update({
+            'system_prompt': self.system_prompt_var.get(),
+            'user_prompt':   self.user_prompt_var.get(),
+            'max_tokens':    self.max_tokens_var.get()
+        })
+
+        # 构造最终要写入的 config
         config = {
-            'current_provider': current_provider,
-            'provider_settings': self.provider_settings,
-            'latex_settings': {
-                'inline_wrapper': self.inline_var.get(),
-                'block_wrapper': self.block_var.get()
-            },
-            'hotkey': self.hotkey_var.get(),
-            'screenshot_hotkey': self.screenshot_hotkey_var.get(),  # 截图快捷键保存
-            'process_pre_exist_image': self.process_pre_exist_image_var.get(),  # 处理起始图片设置保存
-            'prompt_settings': {
-                'system_prompt': self.system_prompt_var.get(),
-                'user_prompt':   self.user_prompt_var.get(),
-                'max_tokens':    self.max_tokens_var.get()
-            }
+            'current_provider':        current_provider,
+            'provider_settings':       self.provider_settings,
+            'latex_settings':          latex_cfg,
+            'hotkey':                  self.hotkey_var.get(),
+            'screenshot_hotkey':       self.screenshot_hotkey_var.get(),
+            'process_pre_exist_image': self.process_pre_exist_image_var.get()
         }
         # 更新处理起始图片设置
         self.processor.process_pre_exist_image=config.get('process_pre_exist_image', False)
@@ -964,59 +992,40 @@ class App:
     def load_settings(self):
         """从配置文件加载设置到内存"""
         try:
-            config = self.config_manager.load()
+            config = self.config_manager.load() or {}
+            # —— 先恢复 provider_settings 和 current_provider —— 
+            self.provider_settings = config.get('provider_settings', self.provider_settings)
+            current_provider = config.get('current_provider', 'OPENAI')
+            self.provider_var.set(current_provider)
 
-            # 仅当 config 中不存在 provider_settings 时才使用默认
-            if 'provider_settings' not in config:
-                self.provider_settings = {
-                    'OPENAI': {'api_key': '', 'proxy': '', 'model': 'gpt-4o'},
-                    '火山引擎': {'api_key': '', 'proxy': '', 'model': ''},
-                    '自定义': {'url': '', 'api_key': '', 'proxy': '', 'model': ''}
-                }
-            else:
-                self.provider_settings = config['provider_settings']
-                current_provider = config.get('current_provider', 'OPENAI')
-                self.provider_var.set(current_provider)
-            
-            # 加载LaTeX包装符设置
-            latex_settings = config.get('latex_settings', {
-                'inline_wrapper': '$ $',
-                'block_wrapper': '$$ $$'
-            })
-            self.inline_var.set(latex_settings['inline_wrapper'])
-            self.block_var.set(latex_settings['block_wrapper'])
+            # 恢复 LaTeX 包装符
+            latex_cfg = config.get('latex_settings', {})
+            self.inline_var.set(latex_cfg.get('inline_wrapper', '$ $'))
+            self.block_var.set(latex_cfg.get('block_wrapper', '$$ $$'))
+            self.processor.set_wrappers(self.inline_var.get(), self.block_var.get())
 
-            # 将包装符应用到处理器
-            self.processor.set_wrappers(
-                self.inline_var.get(), 
-                self.block_var.get()
-            )
-            
-            # 加载热键设置
+            # 恢复热键相关设置
             self.hotkey_var.set(config.get('hotkey', 'ctrl+shift+o'))
-            self.screenshot_hotkey_var.set(config.get('screenshot_hotkey', ''))  # 加载截图快捷键
-            # 加载处理程序启动时已经存在的剪贴板图片设置，默认为False
+            self.screenshot_hotkey_var.set(config.get('screenshot_hotkey', ''))
             self.process_pre_exist_image_var.set(config.get('process_pre_exist_image', False))
-            # 同步到 processor
             self.processor.process_pre_exist_image = self.process_pre_exist_image_var.get()
-            self.register_hotkey()  # 注册热键
-            self.register_screenshot_listener()  # 注册截图监听
+            self.register_hotkey()
+            self.register_screenshot_listener()
 
-            prompt_settings = config.get('prompt_settings', {
+            # 从当前服务商配置里读取 prompt_settings
+            prov_cfg = self.provider_settings.get(current_provider, {})
+            prompts = prov_cfg.get('prompt_settings', {
                 'system_prompt': self.processor.system_prompt,
                 'user_prompt':   self.processor.user_prompt,
                 'max_tokens':    self.processor.max_tokens
             })
-            self.system_prompt_var.set(prompt_settings['system_prompt'])
-            self.user_prompt_var.set(  prompt_settings['user_prompt'])
-            self.max_tokens_var.set(   prompt_settings['max_tokens'])
-            self.processor.set_prompts(
-                self.system_prompt_var.get(),
-                self.user_prompt_var.get()
-            )
-            self.processor.set_max_tokens(self.max_tokens_var.get())
+            self.system_prompt_var.set(prompts['system_prompt'])
+            self.user_prompt_var.set(prompts['user_prompt'])
+            self.max_tokens_var.set(prompts['max_tokens'])
+            self.processor.set_prompts(prompts['system_prompt'], prompts['user_prompt'])
+            self.processor.set_max_tokens(prompts['max_tokens'])
 
-            # 更新所有设置
+            # 应用服务商 UI 和 client 设置
             self.apply_provider_settings()
         except Exception as e:
             self.log(f"加载配置失败: {e}")
@@ -1053,6 +1062,12 @@ class App:
 
         # 加载新服务商配置
         self.apply_provider_settings()
+
+        # 自动保存 current_provider 到配置文件
+        cfg = self.config_manager.load() or {}
+        cfg['current_provider'] = display_provider
+        self.config_manager.save(cfg)
+        
         self.log(f"已切换到 {display_provider} 服务")
 
     def save_custom_url(self):
@@ -1085,7 +1100,7 @@ class App:
 
 if __name__ == "__main__":
     root = tk.Tk()
-    root.geometry("800x600+{}+{}".format(
+    root.geometry("800x700+{}+{}".format(
         root.winfo_screenwidth() // 2 - 400,  # 水平居中
         root.winfo_screenheight() // 2 - 400  # 垂直居中
     ))  # 调整窗口大小以适应新布局
