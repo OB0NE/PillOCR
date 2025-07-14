@@ -26,8 +26,14 @@ class ImageToMarkdown:
         self.gpt_model = 'gpt-4o'
         self.image_encoder = ImageEncoder()
         self.markdown_processor = MarkdownProcessor()
-        self.current_provider = 'OPENAI' 
-        self.temp_process_complete = True
+        self.current_provider = 'OPENAI'
+        self.screenshot_hotkey_isNull = True # 用于标记是否注册了截图快捷键
+        self.screenshot_hotkey_triggered = False # 用于标记是否触发了截图快捷键
+        self.process_pre_exist_image=True # 用于标记是否处理软件启动时已经存在的剪贴板图片
+        try:
+            self.initial_image = ImageGrab.grabclipboard()
+        except:
+            self.initial_image = None
         self.system_prompt = (
             "You are a helpful assistant that converts images to markdown format. "
             "If the image contains mathematical formulas, use LaTeX syntax for them. "
@@ -126,60 +132,38 @@ class ImageToMarkdown:
             ],
             max_tokens=self.max_tokens,
         )
-        print(response)
+        #debug用
+        #print(response)
         markdown_content = response.choices[0].message.content
         markdown_content = re.sub(r'^```markdown\s*\n(.*?)\n```\s*$', r'\1', markdown_content, flags=re.DOTALL)
         return self.markdown_processor.modify_wrappers(markdown_content)
 
     def process_clipboard_image(self):
-        last_image = None
+        if  not self.process_pre_exist_image:
+            last_image=self.initial_image
+        else:
+            last_image = None
         while self.running:
             try:
-                image = ImageGrab.grabclipboard()
-                if isinstance(image, Image.Image) and image != last_image:
-                    self.log_callback("检测到新的剪贴板图像。")
-                    self.app.update_icon_status('processing')
+                if self.screenshot_hotkey_isNull or self.screenshot_hotkey_triggered:
+                    image = ImageGrab.grabclipboard()
+                    if isinstance(image, Image.Image) and image != last_image:
+                        self.log_callback("检测到新的剪贴板图像。")
+                        self.app.update_icon_status('processing')
 
-                    markdown_content = self.process_image(image)
-                    pyperclip.copy(markdown_content)
-                    self.log_callback("识别后的内容已复制到剪贴板。")
+                        markdown_content = self.process_image(image)
+                        pyperclip.copy(markdown_content)
+                        self.log_callback("识别后的内容已复制到剪贴板。")
 
-                    self.app.update_icon_status('success')
-                    last_image = image
-                time.sleep(1)
+                        self.app.update_icon_status('success')
+                        last_image = image
+                        self.screenshot_hotkey_triggered = False
             except Exception as e:
                 self.log_callback(f"发生错误: {e}")
                 self.app.update_icon_status('error')
                 self.running = False
                 break
-
-    def process_clipboard_image_once(self):
-        """一次性处理剪贴板图像"""
-        self.temp_process_complete = False
-        # last_clipboard_content = None
-        pt = time.time()
-        while 1:
-            if time.time()-pt > 60:
-                self.log_callback("等待剪贴板图像超过60秒，停止处理。")
-                break
-            try:
-                image = ImageGrab.grabclipboard()
-                if isinstance(image, Image.Image):
-                    self.log_callback("检测到剪贴板图像。")
-                    self.app.update_icon_status('processing')
-
-                    markdown_content = self.process_image(image)
-                    pyperclip.copy(markdown_content)
-                    self.log_callback("识别后的内容已复制到剪贴板。")
-                    break
-                else:
-                    self.log_callback("剪贴板中没有图像，等待中...")
-                    time.sleep(1)
-            except Exception as e:
-                self.log_callback(f"一次性处理发生错误: {e}")
-                self.app.update_icon_status('error')
-                break
-        self.temp_process_complete = True
+            time.sleep(1)
 
     def start(self):
         self.running = True
@@ -200,13 +184,13 @@ class App:
         self.config_manager = ConfigManager()
         self.hotkey_manager = create_hotkey_manager(self.toggle_processing)
         self.hotkey_var = tk.StringVar(value='ctrl+shift+o')
-        self.screenshot_hotkey_var = tk.StringVar(value='ctrl+shift+a')  # 添加截图快捷键变量
+        self.screenshot_hotkey_var = tk.StringVar(value='')  # 添加截图快捷键变量
         self.provider_var = tk.StringVar(value='OPENAI')  # 确保 provider_var 在 load_settings 之前定义
         self.url_var = tk.StringVar(value='')
         self.system_prompt_var = tk.StringVar(value=self.processor.system_prompt)
         self.user_prompt_var   = tk.StringVar(value=self.processor.user_prompt)
         self.max_tokens_var    = tk.IntVar(   value=self.processor.max_tokens)
-        self.auto_start_var = tk.BooleanVar(value=True)  # 添加自动启动变量
+        self.process_pre_exist_image_var = tk.BooleanVar(value=False)  # 用于标记是否处理软件启动时已经存在的剪贴板图片
         self.log_text = tk.Text()  # 确保 log_text 在 load_settings 之前定义
         self.root = root
         self.root.title("OCR")
@@ -463,13 +447,14 @@ class App:
             for e in (self.hk1, self.hk2, self.hk3):
                 e.bind('<FocusIn>', lambda ev: ev.widget.delete(0, tk.END))
                 e.bind('<Key>', self.capture_hotkey)
+                e.bind('<FocusOut>', self.save_hotkey)
 
             # 截图监听快捷键（三个单键输入框 + “+” 分隔）
             hk_snap_frame = ttk.Frame(hotkey_frame, style='TFrame')
             hk_snap_frame.pack(fill=tk.X, pady=(5,0))
             # 统一第一列宽度，确保对齐
             hk_snap_frame.grid_columnconfigure(0, minsize=140)
-            ttk.Label(hk_snap_frame, text="截图监听快捷键:").grid(row=0, column=0, padx=(0,5))
+            ttk.Label(hk_snap_frame, text="绑定截图快捷键:").grid(row=0, column=0, padx=(0,5))
             self.sk1 = ttk.Entry(hk_snap_frame, width=5)
             self.sk2 = ttk.Entry(hk_snap_frame, width=5)
             self.sk3 = ttk.Entry(hk_snap_frame, width=5)
@@ -482,6 +467,7 @@ class App:
             for e in (self.sk1, self.sk2, self.sk3):
                 e.bind('<FocusIn>', lambda ev: ev.widget.delete(0, tk.END))
                 e.bind('<Key>', self.capture_hotkey)
+                e.bind('<FocusOut>', self.save_screenshot_hotkey)
 
         self.sections['快捷键设置'] = hotkey_section
         
@@ -490,15 +476,15 @@ class App:
         # 启动设置
         startup_frame = ttk.LabelFrame(others_section, text="启动设置", padding=10, style='TLabelframe')
         startup_frame.pack(fill=tk.X, pady=(0, 10))
-        auto_start_check = tk.Checkbutton(
+        process_pre_exist_image_check = tk.Checkbutton(
             startup_frame,
-            text="程序启动时自动开始处理",
-            variable=self.auto_start_var,
-            command=self.save_auto_start_setting,
+            text="处理软件启动时已经存在的剪贴板图片",
+            variable=self.process_pre_exist_image_var,
+            command=self.save_settings,
             bg=bg_color,
             fg=text_color
         )
-        auto_start_check.pack(anchor='w')
+        process_pre_exist_image_check.pack(anchor='w')
 
         self.sections['其他设置'] = others_section
 
@@ -586,12 +572,17 @@ class App:
         self.debounce_timer.start()
 
     def auto_start(self):
-        if self.auto_start_var.get():  # 只有当用户启用自动启动时才开始处理
-            self.start_processing()
-            self.running_state = True
-            self.icon.menu = self.create_menu()
-        else:
-            self.log("自动启动已禁用，请手动启动处理")
+        self.start_processing()
+        self.running_state = True
+        self.icon.menu = self.create_menu()
+
+    # def auto_start(self):
+    #     if self.auto_start_var.get():  # 只有当用户启用自动启动时才开始处理
+    #         self.start_processing()
+    #         self.running_state = True
+    #         self.icon.menu = self.create_menu()
+    #     else:
+    #         self.log("自动启动已禁用，请手动启动处理")
 
     def log(self, message):
         self.log_text.insert(tk.END, message + "\n")
@@ -631,6 +622,14 @@ class App:
         try:
             result = self.hotkey_manager.register_hotkey(self.hotkey_var.get())
             if result:
+                # 分割快捷键字符串并填充到输入框
+                parts = self.hotkey_var.get().strip().split('+')
+                for i in range(1, 4):
+                    entry = getattr(self, f'hk{i}')
+                    entry.delete(0, tk.END)
+                    if i <= len(parts) and parts[i-1]:
+                        entry.insert(0, parts[i-1].lower())
+                        
                 self.log(f"已注册快捷键: {self.hotkey_var.get()}")
             else:
                 self.log("注册快捷键失败")
@@ -658,39 +657,9 @@ class App:
         key = mod_map.get(key, key)
         event.widget.delete(0, tk.END)
         event.widget.insert(0, key)
-        # modifiers = []
-        # if event.state & 0x0001: modifiers.append('shift')
-        # if event.state & 0x0004: modifiers.append('ctrl')
-        # if event.state & 0x0008: modifiers.append('alt')
-        
-        # key = event.keysym.lower()
-        # if key not in modifiers:
-        #     combo = '+'.join(modifiers + [key]) if modifiers else key
-        #     self.hotkey_var.set(combo)
-        return "break"  # 阻止默认输入
+        return "break"
 
-    def finalize_hotkey(self, event):
-        """失去焦点时保存热键"""
-        self.save_hotkey()
-
-    # def capture_screenshot_hotkey(self, event):
-    #     """实时捕获截图快捷键组合"""
-    #     modifiers = []
-    #     if event.state & 0x0001: modifiers.append('shift')
-    #     if event.state & 0x0004: modifiers.append('ctrl')
-    #     if event.state & 0x0008: modifiers.append('alt')
-        
-    #     key = event.keysym.lower()
-    #     if key not in modifiers:
-    #         combo = '+'.join(modifiers + [key]) if modifiers else key
-    #         self.screenshot_hotkey_var.set(combo)
-    #     return "break"  # 阻止默认输入
-
-    def finalize_screenshot_hotkey(self, event):
-        """失去焦点时保存截图快捷键"""
-        self.save_screenshot_hotkey()
-
-    def save_screenshot_hotkey(self):
+    def save_screenshot_hotkey(self,event=None):
         """保存截图快捷键设置"""
         if not HotkeyManager.is_supported():
             return
@@ -699,7 +668,6 @@ class App:
             parts = [self.sk1.get().strip(), self.sk2.get().strip(), self.sk3.get().strip()]
             combo = '+'.join(p.lower() for p in parts if p)
             self.screenshot_hotkey_var.set(combo)
-
             self.unregister_screenshot_listener()
             self.register_screenshot_listener()
             self.save_settings()
@@ -713,14 +681,24 @@ class App:
             return
             
         try:
-            result = self.hotkey_manager.register_screenshot_listener(
-                self.screenshot_hotkey_var.get(),
-                self.on_screenshot_hotkey_triggered
-            )
-            if result:
-                self.log(f"已注册截图监听: {self.screenshot_hotkey_var.get()}")
-            else:
-                self.log("注册截图监听失败")
+            if self.screenshot_hotkey_var.get().strip():
+                result = self.hotkey_manager.register_screenshot_listener(
+                    self.screenshot_hotkey_var.get(),
+                    self.on_screenshot_hotkey_triggered
+                )
+                if result:
+                    self.processor.screenshot_hotkey_isNull = False  # 标记已注册截图快捷键
+                    # 分割快捷键字符串并填充到输入框
+                    parts = self.screenshot_hotkey_var.get().strip().split('+')
+                    for i in range(1, 4):
+                        entry = getattr(self, f'sk{i}')
+                        entry.delete(0, tk.END)
+                        if i <= len(parts) and parts[i-1]:
+                            entry.insert(0, parts[i-1].lower())
+
+                    self.log(f"已注册截图监听: {self.screenshot_hotkey_var.get()}")
+                else:
+                    self.log("注册截图监听失败")
         except Exception as e:
             self.log(f"注册截图监听失败: {e}")
 
@@ -731,37 +709,19 @@ class App:
         
         try:
             self.hotkey_manager.unregister_screenshot_listener()
+            self.processor.screenshot_hotkey_isNull = True
         except:
             pass
 
-    def start_until_temp_complete(self):
-        """等待临时处理完成后开始处理"""
-        while not self.processor.temp_process_complete:
-            time.sleep(0.1)
-        time.sleep(0.5)
-        self.log("临时处理完成，开始常规处理。")
-        self.start_processing()
-        
-    def demo_until_temp_complete(self):
-        for i in range(10):
-            if i%2==0:
-                self.update_icon_status('success')
-            else:
-                self.update_icon_status('processing')
-            time.sleep(0.3)
-        self.update_icon_status('processing')
         
     def on_screenshot_hotkey_triggered(self):
         """截图快捷键触发回调"""
         # 延迟一小段时间，确保截图已经保存到剪贴板
         if self.running_state:
-            self.log("检测到指定截图快捷键触发，停止常规处理。")
-            self.stop_processing() # 停止当前处理
-            threading.Timer(0.1, self.processor.process_clipboard_image_once).start()
-            threading.Timer(1, self.start_until_temp_complete).start()
-        else:
-            threading.Timer(0.1, self.processor.process_clipboard_image_once).start()
-            threading.Timer(1, self.demo_until_temp_complete).start()
+            self.processor.screenshot_hotkey_triggered = True
+            self.log("检测到截图快捷键触发")
+            # 60s 后重置 screenshot_hotkey_triggered 标志
+            threading.Timer(60, lambda: setattr(self.processor, 'screenshot_hotkey_triggered', False)).start()
 
     def start_processing(self):
         self.processor.start()
@@ -880,7 +840,7 @@ class App:
         
         # 更新代理
         self.processor.set_proxy(settings.get('proxy', ''))
-        
+
         # 更新模型
         if current_provider == 'OPENAI':
             self.processor.set_gpt_model(settings.get('model', 'gpt-4o'))
@@ -986,14 +946,15 @@ class App:
             },
             'hotkey': self.hotkey_var.get(),
             'screenshot_hotkey': self.screenshot_hotkey_var.get(),  # 截图快捷键保存
-            'auto_start': self.auto_start_var.get(),  # 自动启动设置保存
+            'process_pre_exist_image': self.process_pre_exist_image_var.get(),  # 处理起始图片设置保存
             'prompt_settings': {
                 'system_prompt': self.system_prompt_var.get(),
                 'user_prompt':   self.user_prompt_var.get(),
                 'max_tokens':    self.max_tokens_var.get()
             }
         }
-        
+        # 更新处理起始图片设置
+        self.processor.process_pre_exist_image=config.get('process_pre_exist_image', False)
         try:
             self.config_manager.save(config)
             self.update_client_settings()
@@ -1033,8 +994,11 @@ class App:
             
             # 加载热键设置
             self.hotkey_var.set(config.get('hotkey', 'ctrl+shift+o'))
-            self.screenshot_hotkey_var.set(config.get('screenshot_hotkey', 'ctrl+shift+a'))  # 加载截图快捷键
-            self.auto_start_var.set(config.get('auto_start', True))  # 加载自动启动设置，默认为True
+            self.screenshot_hotkey_var.set(config.get('screenshot_hotkey', ''))  # 加载截图快捷键
+            # 加载处理程序启动时已经存在的剪贴板图片设置，默认为False
+            self.process_pre_exist_image_var.set(config.get('process_pre_exist_image', False))
+            # 同步到 processor
+            self.processor.process_pre_exist_image = self.process_pre_exist_image_var.get()
             self.register_hotkey()  # 注册热键
             self.register_screenshot_listener()  # 注册截图监听
 
@@ -1112,11 +1076,11 @@ class App:
         self.save_settings()
         self.log(f"模型已设置为: {model_choice}")
 
-    def save_auto_start_setting(self):
-        """保存自动启动设置"""
-        self.save_settings()
-        status = "启用" if self.auto_start_var.get() else "禁用"
-        self.log(f"自动启动设置已{status}")
+    # def save_auto_start_setting(self):
+    #     """保存自动启动设置"""
+    #     self.save_settings()
+    #     status = "启用" if self.auto_start_var.get() else "禁用"
+    #     self.log(f"自动启动设置已{status}")
 
 
 if __name__ == "__main__":
