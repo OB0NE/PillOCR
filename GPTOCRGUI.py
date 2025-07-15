@@ -344,11 +344,6 @@ class App:
         self.proxy_entry.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=10)
         ttk.Button(proxy_frame, text="保存", command=self.save_proxy).pack(side=tk.RIGHT)
 
-        # Prompt & Token 设置框
-        self.system_prompt_var = tk.StringVar(value=self.processor.system_prompt)
-        self.user_prompt_var   = tk.StringVar(value=self.processor.user_prompt)
-        self.max_tokens_var    = tk.IntVar(   value=self.processor.max_tokens)
-
         prompt_frame = ttk.LabelFrame(model_section, text="Prompt & Token 设置", padding=10, style='TLabelframe')
         prompt_frame.pack(fill=tk.X, pady=(0, 10))
 
@@ -967,8 +962,8 @@ class App:
         # prompt_settings 
         self.provider_settings[current_provider].setdefault('prompt_settings', {})
         self.provider_settings[current_provider]['prompt_settings'].update({
-            'system_prompt': self.system_prompt_var.get(),
-            'user_prompt':   self.user_prompt_var.get(),
+            'system_prompt': self.system_text.get("1.0","end-1c").strip(),
+            'user_prompt':   self.user_text.get("1.0","end-1c").strip(),
             'max_tokens':    self.max_tokens_var.get()
         })
 
