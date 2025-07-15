@@ -565,6 +565,7 @@ class App:
         for sec in self.sections.values():
             sec.pack_forget()
         self.sections[name].pack(fill=tk.BOTH, expand=True)
+        self.root.update_idletasks()
 
     def debounced_update_wrappers(self, *args):
         """防抖包装符更新"""
