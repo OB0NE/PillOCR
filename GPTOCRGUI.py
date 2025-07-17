@@ -864,14 +864,15 @@ class App:
             prov_cfg.get('user_prompt', 'Here is my image.')
         )
         self.processor.set_max_tokens(
-            prov_cfg.get('max_tokens', '1000')
+            int(prov_cfg.get('max_tokens', 1000))
         )
 
     def apply_provider_settings(self):
         """处理和切换服务商相关的 UI 界面更新和组件显示"""
         current_provider = self.provider_var.get()
         settings = self.provider_settings.get(current_provider, {})
-        
+
+        # 更新处理器的服务商
         if (current_provider == 'OPENAI'):
             self.processor.set_provider('OPENAI')
         elif (current_provider == '火山引擎'):
@@ -879,35 +880,45 @@ class App:
         elif current_provider == '自定义':
             self.processor.set_provider('自定义')
         
+        # —— 公共：所有服务商通用的 API Key 和 代理 UI 更新 —— 
+        self.api_key_var.set(settings.get('api_key', ''))
+        self.proxy_var.set(settings.get('proxy', ''))
+
+        # —— 各服务商特有的 UI 布局 —— 
+        # 隐藏所有模型/接入点/自定义 URL 区块
+        self.model_frame.pack_forget()
+        self.model_entry_frame.pack_forget()
+        self.endpoint_frame.pack_forget()
+        self.custom_url_frame.pack_forget()
+
         if current_provider == 'OPENAI':
-            # OpenAI 特定设置
-            self.api_key_var.set(settings.get('api_key', ''))
-            self.proxy_var.set(settings.get('proxy', ''))
+            # OpenAI：显示模型下拉
             self.model_var.set(settings.get('model', 'gpt-4o'))
-            # UI更新
-            self.model_entry_frame.pack_forget()
-            self.endpoint_frame.pack_forget()
             self.model_frame.pack(after=self.provider_frame, fill=tk.X, pady=(0, 10))
         elif current_provider == '火山引擎':
-            # 火山引擎特定设置
-            self.api_key_var.set(settings.get('api_key', ''))
-            self.proxy_var.set(settings.get('proxy', ''))
+            # 火山引擎：显示接入点输入
             self.model_var.set(settings.get('model', ''))
-            # UI更新
-            self.model_frame.pack_forget()
-            self.model_entry_frame.pack_forget()
             self.endpoint_frame.pack(after=self.provider_frame, fill=tk.X, pady=(0, 10))
         elif current_provider == '自定义':
-            # 读取自定义URL, 如果需要可以在 self.provider_settings['自定义'] 中添加 url
+            # 自定义：URL + 模型输入
             self.url_var.set(settings.get('url', ''))
-            self.api_key_var.set(settings.get('api_key', ''))
-            self.proxy_var.set(settings.get('proxy', ''))
             self.model_var.set(settings.get('model', ''))
-            # 自定义场景下可根据需求显示/隐藏 UI
-            self.model_frame.pack_forget()
-            self.endpoint_frame.pack_forget()
             self.custom_url_frame.pack(after=self.provider_frame, fill=tk.X, pady=(0, 10))
             self.model_entry_frame.pack(after=self.custom_url_frame, fill=tk.X, pady=(0, 10))
+        
+        # 同步 Prompt & Token 
+        prov_cfg = settings.get('prompt_settings', {})
+        sys_txt = prov_cfg.get('system_prompt', self.processor.system_prompt)
+        usr_txt = prov_cfg.get('user_prompt',   self.processor.user_prompt)
+        max_t  = prov_cfg.get('max_tokens',    self.processor.max_tokens)
+
+        # 更新多行文本框
+        self.system_text.delete('1.0', tk.END)
+        self.system_text.insert('1.0', sys_txt)
+        self.user_text.delete('1.0',   tk.END)
+        self.user_text.insert('1.0',   usr_txt)
+        # 更新 max_tokens 输入框
+        self.max_tokens_var.set(max_t)
         
         # 确保在应用设置时更新客户端
         self.update_client_settings()
@@ -1096,7 +1107,7 @@ class App:
 
 if __name__ == "__main__":
     root = tk.Tk()
-    root.geometry("800x700+{}+{}".format(
+    root.geometry("800x800+{}+{}".format(
         root.winfo_screenwidth() // 2 - 400,  # 水平居中
         root.winfo_screenheight() // 2 - 400  # 垂直居中
     ))  # 调整窗口大小以适应新布局
